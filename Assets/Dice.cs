@@ -17,6 +17,8 @@ public class Dice : ScriptableObject
         Special = 3
     }
     [SerializeField]
+    private Sprite sprite;
+    [SerializeField]
     private FaceType type;
     [SerializeField]
     private int value;
@@ -43,6 +45,7 @@ public class Dice : ScriptableObject
     }
     }
     public string diceName;
+    public Sprite previewSprite;
     public DiceFace[] faces;
     public int rarity;
 }

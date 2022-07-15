@@ -9,15 +9,13 @@ public class AttackPattern : ScriptableObject
     public class ProjectileSpawn
     {
         [SerializeField]
-        public Vector2 spawnPos;
+        private Vector2 spawnPos;
         [SerializeField]
-        public float rotation;
+        private float rotation;
         [SerializeField]
-        public GameObject bulletType;
+        private GameObject bulletType;
         [SerializeField]
-        public float delay;
+        private float delay;
     }
     public ProjectileSpawn[] projectiles;
-
-
 }
