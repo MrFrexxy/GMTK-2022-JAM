@@ -15,6 +15,7 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     private RectTransform rectTransform;
     [SerializeField]
     private RectTransform canvas;
+    private Canvas thisCanvas;
     private bool isFocused;
     private bool isGrabbed;
     private Vector2 originalPos;
@@ -23,6 +24,7 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         spriteRenderer = GetComponent<Image>();
         rectTransform = GetComponent<RectTransform>();
+        thisCanvas = GetComponent<Canvas>();
     }
     void Start()
     {
@@ -52,6 +54,7 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             //RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas, eventData.position, null, out newPos);
             //rectTransform.position = eventData.position;
             isGrabbed = true;
+            transform.SetAsLastSibling();
         }
     }
     public void OnPointerUp(PointerEventData eventData)

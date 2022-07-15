@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6212771203136870316
+--- !u!1 &2192793239009000056
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6212771203136870227}
-  - component: {fileID: 6212771203136870225}
-  - component: {fileID: 6212771203136870226}
-  - component: {fileID: 6212771203136870224}
+  - component: {fileID: 2192793239009000071}
+  - component: {fileID: 2192793239009000069}
+  - component: {fileID: 2192793239009000070}
+  - component: {fileID: 2192793239009000068}
+  - component: {fileID: 2192793239009000067}
   m_Layer: 5
-  m_Name: Slot 1
+  m_Name: Slot
   m_TagString: Dice Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &6212771203136870227
+--- !u!224 &2192793239009000071
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6212771203136870316}
+  m_GameObject: {fileID: 2192793239009000056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -36,31 +37,31 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 208.4}
-  m_SizeDelta: {x: 0, y: -416.8}
+  m_AnchoredPosition: {x: 0, y: 432}
+  m_SizeDelta: {x: 0, y: -864}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &6212771203136870225
+--- !u!222 &2192793239009000069
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6212771203136870316}
+  m_GameObject: {fileID: 2192793239009000056}
   m_CullTransparentMesh: 1
---- !u!114 &6212771203136870226
+--- !u!114 &2192793239009000070
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6212771203136870316}
+  m_GameObject: {fileID: 2192793239009000056}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -77,13 +78,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6212771203136870224
+--- !u!114 &2192793239009000068
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6212771203136870316}
+  m_GameObject: {fileID: 2192793239009000056}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae74154fe053a31429d47240afd9b9e0, type: 3}
@@ -95,22 +96,43 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0.35089597
-      outSlope: 0.35089597
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.09852654
-    - serializedVersion: 3
-      time: 1.0023835
-      value: 0.098394066
       inSlope: 0
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
+    - serializedVersion: 3
+      time: 0.48520043
+      value: 0.11090161
+      inSlope: 0.7727446
+      outSlope: 0.7727446
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.1482317
+    - serializedVersion: 3
+      time: 0.99889696
+      value: 0.2010307
+      inSlope: -0.0010683377
+      outSlope: -0.0010683377
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.3455411
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   canvas: {fileID: 0}
+--- !u!225 &2192793239009000067
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2192793239009000056}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BasicHeal
   m_EditorClassIdentifier: 
   diceName: 
-  previewSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  previewSprite: {fileID: 470077372, guid: d83215c8ced4f554ba7f0e7a03d4daa7, type: 3}
   faces:
   - sprite: {fileID: 0}
     type: 2
