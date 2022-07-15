@@ -12,17 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0768e2fd9438f40a517adffc75779d, type: 3}
   m_Name: BasicAttack
   m_EditorClassIdentifier: 
+  diceName: 
+  previewSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   faces:
-  - type: 0
+  - sprite: {fileID: 0}
+    type: 0
     value: 1
-  - type: 0
+    specialAction: {fileID: 0}
+  - sprite: {fileID: 0}
+    type: 0
     value: 2
-  - type: 0
+    specialAction: {fileID: 0}
+  - sprite: {fileID: 0}
+    type: 0
     value: 3
-  - type: 0
+    specialAction: {fileID: 0}
+  - sprite: {fileID: 0}
+    type: 0
     value: 4
-  - type: 0
+    specialAction: {fileID: 0}
+  - sprite: {fileID: 0}
+    type: 0
     value: 5
-  - type: 0
+    specialAction: {fileID: 0}
+  - sprite: {fileID: 0}
+    type: 0
     value: 6
+    specialAction: {fileID: 0}
   rarity: 0

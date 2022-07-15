@@ -3,6 +3,5 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public static class PlayerInfo
-{
-    public static Dice[] dieBag {get; set; }
+{    public static Dice[] dieBag {get; set; }
 }
