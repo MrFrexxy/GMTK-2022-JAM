@@ -9,40 +9,44 @@ public class Dice : ScriptableObject
     [Serializable]
     public class DiceFace
     {
-    enum FaceType : int
-    {
-        Attack = 0,
-        Defend = 1,
-        Heal = 2,
-        Special = 3
-    }
-    [SerializeField]
-    private Sprite sprite;
-    [SerializeField]
-    private FaceType type;
-    [SerializeField]
-    private int value;
-    [SerializeField]
-    private DiceAction specialAction;
-    public void ActivateFace(GameObject target)
-    {
-        if((int)type == 0)
+        enum FaceType : int
         {
-            target.GetComponent<StatusManager>().AddHealth(-value);
+            Attack = 0,
+            Defend = 1,
+            Heal = 2,
+            Special = 3
         }
-        if((int)type == 1)
+        [SerializeField]
+        private Sprite sprite;
+        [SerializeField]
+        private FaceType type;
+        [SerializeField]
+        private int value;
+        [SerializeField]
+        private DiceAction specialAction;
+        public void ActivateFace(GameObject target)
         {
-            target.GetComponent<StatusManager>().AddBlock(value);
+            if((int)type == 0)
+            {
+                target.GetComponent<StatusManager>().AddHealth(-value);
+            }
+            if((int)type == 1)
+            {
+                target.GetComponent<StatusManager>().AddBlock(value);
+            }
+            if((int)type == 2)
+            {
+                target.GetComponent<StatusManager>().AddHealth(value);
+            }
+            if((int)type == 3)
+            {
+                specialAction.DoAction(target);
+            }
         }
-        if((int)type == 2)
-        {
-            target.GetComponent<StatusManager>().AddHealth(value);
-        }
-        if((int)type == 3)
-        {
-            specialAction.DoAction(target);
-        }
-    }
+        public Sprite GetSprite()
+            {
+                return sprite;
+            }
     }
     public string diceName;
     public Sprite previewSprite;
