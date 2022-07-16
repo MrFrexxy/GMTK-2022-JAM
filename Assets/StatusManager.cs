@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StatusManager : MonoBehaviour
 {
@@ -26,12 +27,15 @@ public class StatusManager : MonoBehaviour
     public void AddBlock(int amt)
     {
         currentShield += amt;
+        SceneManager.LoadScene(1);
         //so shield doesnt become negative
         currentShield = currentShield < 0 ? 0 : currentShield;
     }
     public void Die()
     {
         //do death stuff
+        PlayerInfo.stageNumber++;
+
         Destroy(gameObject);
     }
     public void SetMaxHealth(int newHealth)
