@@ -26,7 +26,6 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public bool isFading;
     private Vector3 originalPos;
     private Vector2 rollPos;
-    private GameObject enemy;
     private DiceBarManager diceBarManager;
     private bool canRollDice;
     
@@ -36,7 +35,6 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         diceBarManager = GameObject.FindGameObjectWithTag("Dice Bar").GetComponent<DiceBarManager>();
         rectTransform = GetComponent<RectTransform>();
         thisCanvas = GetComponent<Canvas>();
-        enemy = GameObject.FindGameObjectWithTag("Enemy");
     }
     void Start()
     {
@@ -148,7 +146,7 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             yield return new WaitForSeconds(ROLLING_ANIM_TIME);
         }
         //activates last face rolled and fades away
-        currentDice.faces[faceNum].ActivateFace(enemy);
+        currentDice.faces[faceNum].ActivateFace(diceBarManager.enemy, diceBarManager.player);
         yield return new WaitForSeconds(ROLLING_ANIM_TIME*2);
         isRolling = false;
         isFading = true;

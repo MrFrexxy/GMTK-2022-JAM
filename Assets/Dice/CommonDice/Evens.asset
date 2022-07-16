@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Evens
   m_EditorClassIdentifier: 
   diceName: Evens
+  description: An attack dice with all even numbers
   previewSprite: {fileID: 878964474, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
   faces:
   - sprite: {fileID: 878964474, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}

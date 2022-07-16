@@ -10,11 +10,14 @@ public class DiceBarManager : MonoBehaviour
     [SerializeField]
     private Canvas canvas;
     public int rollsLeft;
-
+    public GameObject enemy;
+    public GameObject player;
 
     public Dice[] testingBag;
     void Start()
     {
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
+        player = GameObject.FindGameObjectWithTag("Player");
         PlayerInfo.dieBag = testingBag;
         RefillBag();
         diceSlots = transform.GetComponentsInChildren<DiceSlot>();
@@ -40,7 +43,7 @@ public class DiceBarManager : MonoBehaviour
     {
         foreach(DiceSlot slot in diceSlots)
         {
-            slot.RemoveDice();
+            if(slot.spriteRenderer.enabled == true) slot.RemoveDice();
         }
     }
     public void ReDrawDice()

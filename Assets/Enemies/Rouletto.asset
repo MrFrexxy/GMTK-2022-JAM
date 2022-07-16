@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3b93144b5323841adba3cb843aa290, type: 3}
   m_Name: Rouletto
   m_EditorClassIdentifier: 
-  enemyName: Rouletto
+  enemyName: Raoul
   sprite: {fileID: 21300000, guid: 394c7c8c02bd709468bc425e51248db3, type: 3}
   attackPool:
   - {fileID: 11400000, guid: 5ce2109e814a4a6459e1a542eb378176, type: 2}
   monologuePool:
   - I am a roulette wheel.
   - EEEEOOOOWWWW
-  - hbshjigb
-  - yep
-  - roll
-  - wheel
+  - '*It landed on black*'
+  - '*It landed on red*'
+  - '*Rattling noises*'
+  - I'm in Spain without the A.
   health: 25

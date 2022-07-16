@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BasicHeal
   m_EditorClassIdentifier: 
   diceName: Basic Heal
+  description: A basic six sided healing dice
   previewSprite: {fileID: -809281699, guid: b5d8fe67d5c1eae438765cc0a70a14b9, type: 3}
   faces:
   - sprite: {fileID: -809281699, guid: b5d8fe67d5c1eae438765cc0a70a14b9, type: 3}

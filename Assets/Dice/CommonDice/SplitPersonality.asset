@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SplitPersonality
   m_EditorClassIdentifier: 
   diceName: Split Personality
+  description: Half healing, half attacking
   previewSprite: {fileID: -1364966724, guid: 1d91456446a745b4599f57455e84bfb5, type: 3}
   faces:
   - sprite: {fileID: 327123153, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}

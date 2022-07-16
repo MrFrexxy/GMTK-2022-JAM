@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 491142961}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1015,6 +1015,8 @@ MonoBehaviour:
   currentBag: []
   canvas: {fileID: 0}
   rollsLeft: 0
+  enemy: {fileID: 0}
+  player: {fileID: 0}
   testingBag:
   - {fileID: 11400000, guid: a108544a204d0384e8b7e3185da3642c, type: 2}
   - {fileID: 11400000, guid: 10d53c674adc008419957f3cc4b9a3d4, type: 2}
@@ -1030,6 +1032,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4d8e48872f8b05e40831145cc4e7e4c1, type: 2}
   - {fileID: 11400000, guid: 4d8e48872f8b05e40831145cc4e7e4c1, type: 2}
   - {fileID: 11400000, guid: 4d8e48872f8b05e40831145cc4e7e4c1, type: 2}
+  - {fileID: 11400000, guid: 7c3e4c744988a0445bcfb262d778ce2c, type: 2}
+  - {fileID: 11400000, guid: 7c3e4c744988a0445bcfb262d778ce2c, type: 2}
 --- !u!1001 &1019586672
 PrefabInstance:
   m_ObjectHideFlags: 0

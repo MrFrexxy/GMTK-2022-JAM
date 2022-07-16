@@ -12,9 +12,10 @@ public class Dice : ScriptableObject
         enum FaceType : int
         {
             Attack = 0,
-            Defend = 1,
+            SelfHarm = 1,
             Heal = 2,
-            Special = 3
+            EnemyHeal = 3,
+            Special = 4
         }
         [SerializeField]
         private Sprite sprite;
@@ -24,7 +25,7 @@ public class Dice : ScriptableObject
         private int value;
         [SerializeField]
         private DiceAction specialAction;
-        public void ActivateFace(GameObject target)
+        public void ActivateFace(GameObject target, GameObject player)
         {
             if((int)type == 0)
             {
@@ -32,13 +33,17 @@ public class Dice : ScriptableObject
             }
             if((int)type == 1)
             {
-                target.GetComponent<StatusManager>().AddBlock(value);
+                player.GetComponent<StatusManager>().AddHealth(-value);
             }
             if((int)type == 2)
             {
-                target.GetComponent<StatusManager>().AddHealth(value);
+                player.GetComponent<StatusManager>().AddHealth(value);
             }
             if((int)type == 3)
+            {
+                target.GetComponent<StatusManager>().AddHealth(value);
+            }
+            if((int)type == 4)
             {
                 specialAction.DoAction(target);
             }
@@ -49,7 +54,10 @@ public class Dice : ScriptableObject
             }
     }
     public string diceName;
+    [TextArea(3,5)]
+    public string description;
     public Sprite previewSprite;
     public DiceFace[] faces;
+    [Range(0, 9)]
     public int rarity;
 }

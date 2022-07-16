@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BasicAttack
   m_EditorClassIdentifier: 
   diceName: Basic Attack
+  description: A basic six sided attack dice
   previewSprite: {fileID: 327123153, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
   faces:
   - sprite: {fileID: 327123153, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
