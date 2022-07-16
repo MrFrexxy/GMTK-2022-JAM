@@ -6,7 +6,7 @@ using TMPro;
 
 public class EnemyManager : MonoBehaviour
 {
-    private const int MAX_LINES = 5;
+    private const int MAX_LINES = 4;
     public TMP_Text textBox;
     public Image icon;
     public Enemy enemyData;
@@ -28,8 +28,10 @@ public class EnemyManager : MonoBehaviour
     public void StartTurn()
     {
         Debug.Log("StartTurn");
+        //sends a random message from the enemy
         string lineToSend = enemyData.enemyName + ":" + enemyData.monologuePool[Random.Range(0, enemyData.monologuePool.Length)];
         SendLine(lineToSend, ref text);
+        //picks a random attack form attack pool and announces it
         AttackPattern nextAttack = enemyData.attackPool[Random.Range(0, enemyData.attackPool.Length)];
         lineToSend = enemyData.enemyName + " used " + nextAttack.name;
         SendLine(lineToSend, ref text);
@@ -44,17 +46,14 @@ public class EnemyManager : MonoBehaviour
     private IEnumerator DoAttack(AttackPattern attackToDo)
     {
         
-        Debug.Log("StartATTACK");
         float highestDelay = 0;
         for (int i = 0; i < attackToDo.projectiles.Length; i++)
         {
-            Debug.Log("QueueATTACK");
             if (attackToDo.projectiles[i].delay > highestDelay) highestDelay = attackToDo.projectiles[i].delay;
             Debug.Log(i);
             StartCoroutine(QueueProjectile(attackToDo.projectiles[i]));
         }
         yield return new WaitForSeconds(highestDelay + attackToDo.endDelay);
-        Debug.Log("THIS PLACE");
         EndTurn();
     }
     private IEnumerator QueueProjectile(AttackPattern.ProjectileSpawn projectileSpawn)
@@ -76,9 +75,10 @@ public class EnemyManager : MonoBehaviour
         //otherwise set text to next open line
         else 
         for(int i = 0; i < MAX_LINES; i++)
+        {
             if(fullText[i] == null)
             fullText[MAX_LINES-1] = addedText;
-        
+        }
         string newText = "";
         foreach(string t in fullText)
         {

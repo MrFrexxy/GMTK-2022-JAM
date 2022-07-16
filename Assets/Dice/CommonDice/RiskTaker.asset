@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0768e2fd9438f40a517adffc75779d, type: 3}
+  m_Name: RiskTaker
+  m_EditorClassIdentifier: 
+  diceName: Risk Taker
+  previewSprite: {fileID: 554854207, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
+  faces:
+  - sprite: {fileID: 678018816, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
+    type: 0
+    value: 0
+    specialAction: {fileID: 0}
+  - sprite: {fileID: 678018816, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
+    type: 0
+    value: 0
+    specialAction: {fileID: 0}
+  - sprite: {fileID: 678018816, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
+    type: 0
+    value: 0
+    specialAction: {fileID: 0}
+  - sprite: {fileID: 678018816, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
+    type: 0
+    value: 0
+    specialAction: {fileID: 0}
+  - sprite: {fileID: 678018816, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
+    type: 0
+    value: 0
+    specialAction: {fileID: 0}
+  - sprite: {fileID: 554854207, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
+    type: 0
+    value: 21
+    specialAction: {fileID: 0}
+  rarity: 0

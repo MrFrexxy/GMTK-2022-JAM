@@ -9,7 +9,7 @@ public class DiceBarManager : MonoBehaviour
     public List<Dice> currentBag;
     [SerializeField]
     private Canvas canvas;
-    public bool canRoll;
+    public int rollsLeft;
 
 
     public Dice[] testingBag;
@@ -19,7 +19,6 @@ public class DiceBarManager : MonoBehaviour
         RefillBag();
         diceSlots = transform.GetComponentsInChildren<DiceSlot>();
         ReDrawDice();
-        canRoll = true;
     }
     public void RemoveFromBag(int index)
     {
@@ -52,5 +51,6 @@ public class DiceBarManager : MonoBehaviour
             slot.ChangeDice(currentBag[dicePick]);
             RemoveFromBag(dicePick);
         }
+        rollsLeft = PlayerInfo.ROLLCOUNT;
     }
 }

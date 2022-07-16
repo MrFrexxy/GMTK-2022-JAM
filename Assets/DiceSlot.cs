@@ -6,15 +6,15 @@ using UnityEngine.EventSystems;
 
 public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler, IPointerMoveHandler
 {   
-    private const int animationLength = 45;
-    private const float ROLLING_ANIM_TIME = 0.2f;
+    private const int animationLength = 60;
+    private const float ROLLING_ANIM_TIME = 0.1f;
     [SerializeField]
     private AnimationCurve mouseoverCurve;
     [SerializeField]
     private AnimationCurve fadeAwayCurve;
     public float animationFrame;
     private Dice currentDice;
-    private Image spriteRenderer;
+    public Image spriteRenderer;
     private RectTransform rectTransform;
     [SerializeField]
     private RectTransform canvas;
@@ -24,7 +24,7 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public bool inAttackPos;
     public bool isRolling;
     public bool isFading;
-    private Vector2 originalPos;
+    private Vector3 originalPos;
     private Vector2 rollPos;
     private GameObject enemy;
     private DiceBarManager diceBarManager;
@@ -46,23 +46,26 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     void LateUpdate()
     {
         if(GameStateManager.currentState != GameStateManager.GameState.PlayerTurn) return;
+        if(isRolling) return;
         if(isFading) 
         {
             if(animationFrame > 0) 
             {
                 animationFrame--;
-                float sizeValue = mouseoverCurve.Evaluate(animationFrame/animationLength);
+                float sizeValue = mouseoverCurve.Evaluate(animationFrame/(animationLength*2));
                 rectTransform.localScale = Vector3.one * (sizeValue);
             }
             else if(animationFrame == 0)
             {
                 RemoveDice();
-                animationFrame--;
+                if(diceBarManager.rollsLeft == 0)
+                {
+                    GameStateManager.ChangeState(GameStateManager.GameState.EnemyTurn);
+                    diceBarManager.RemoveAll();
+                }
             }
             return;
         }
-
-        if(isRolling) return;
         if(isFocused)
         {
             if(animationFrame < animationLength) animationFrame++;
@@ -75,8 +78,6 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             float sizeValue = mouseoverCurve.Evaluate(animationFrame/animationLength);
             rectTransform.localScale = Vector3.one * (sizeValue+1);
         }
-        //Guard clause
-        if(GameStateManager.currentState != GameStateManager.GameState.PlayerTurn) return;
         if(isGrabbed && Input.mousePosition.x > Screen.width/2)
         {
             inAttackPos = true;
@@ -85,7 +86,7 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(diceBarManager.canRoll && !isRolling && isFocused && GameStateManager.currentState == GameStateManager.GameState.PlayerTurn)
+        if(diceBarManager.rollsLeft != 0 && !isRolling && isFocused && GameStateManager.currentState == GameStateManager.GameState.PlayerTurn)
         {
             isGrabbed = true;
             transform.SetAsLastSibling();
@@ -93,12 +94,15 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
     public void OnPointerUp(PointerEventData eventData)
     {
-            isGrabbed = false;
-            if(!inAttackPos)
-            rectTransform.position = originalPos;
-            else
-            {
-                StartCoroutine(RollDice());
+            if(isGrabbed)
+            { 
+                isGrabbed = false;
+                if(!inAttackPos)
+                rectTransform.position = originalPos;
+                else
+                {
+                    StartCoroutine(RollDice());
+                }
             }
     }
     public void OnPointerMove(PointerEventData eventData)
@@ -107,8 +111,7 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if(isRolling) return;
-        isFocused = true;
+        if(!isRolling) isFocused = true;
     }
     public void OnPointerExit(PointerEventData eventData)
     {
@@ -125,23 +128,18 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         currentDice = null;
         spriteRenderer.enabled = false;
+        rectTransform.SetPositionAndRotation(originalPos, Quaternion.identity);
         isFading = false;
         isRolling = false;
         isFocused = false;
         isGrabbed = false;
-        rectTransform.position = originalPos;
-        diceBarManager.canRoll = true;
-        if(GameStateManager.turnsLeft == 0)
-        {
-            GameStateManager.ChangeState(GameStateManager.GameState.EnemyTurn);
-            diceBarManager.RemoveAll();
-        }
     }
     public IEnumerator RollDice()
     {
-        GameStateManager.turnsLeft--;
-        diceBarManager.canRoll = false;
+        //decrements rollcount and changes to rollingState
+        diceBarManager.rollsLeft--;
         isRolling = true;
+        //then shuffles face a couple of times
         int faceNum = 0;
         for(int i = 0; i < 6; i++)
         {
@@ -149,9 +147,11 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             spriteRenderer.sprite = currentDice.faces[faceNum].GetSprite();
             yield return new WaitForSeconds(ROLLING_ANIM_TIME);
         }
+        //activates last face rolled and fades away
         currentDice.faces[faceNum].ActivateFace(enemy);
-        yield return new WaitForSeconds(ROLLING_ANIM_TIME*3);
+        yield return new WaitForSeconds(ROLLING_ANIM_TIME*2);
+        isRolling = false;
         isFading = true;
-        animationFrame = animationLength;
+        animationFrame = animationLength*2;
     }
 }
