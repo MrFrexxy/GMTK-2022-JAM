@@ -105,7 +105,7 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
     public void OnPointerMove(PointerEventData eventData)
     {
-        if(isGrabbed) rectTransform.position = eventData.position;
+        if(isGrabbed) rectTransform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
