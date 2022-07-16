@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
+    private Animator animator;
+
     [HideInInspector]
     public float vertInput;
     [HideInInspector]
@@ -14,6 +16,7 @@ public class MovementController : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
     void Update()
@@ -30,5 +33,7 @@ public class MovementController : MonoBehaviour
     {
         horizInput = Input.GetAxisRaw("Horizontal");
         vertInput = Input.GetAxisRaw("Vertical");
+        animator.SetFloat("xspeed", horizInput);
+        animator.SetFloat("yspeed", vertInput);
     }
 }

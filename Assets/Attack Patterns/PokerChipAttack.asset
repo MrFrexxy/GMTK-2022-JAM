@@ -10,17 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9128542f038762845b784f8ae059cafa, type: 3}
-  m_Name: New Attack Pattern
+  m_Name: PokerChipAttack
   m_EditorClassIdentifier: 
   attackName: 
   endDelay: 0.1
   projectiles:
-  - spawnPos: {x: 0, y: 0}
+  - spawnPos: {x: 3.7, y: 4}
     bulletType: {fileID: 8053003563457992941, guid: 14f5971f6c4c8654c88971bf63bfe1e6, type: 3}
-    delay: 0
-  - spawnPos: {x: 0, y: -6.49}
+    delay: 3
+  - spawnPos: {x: 3.7, y: -1.6}
+    bulletType: {fileID: 8053003563457992941, guid: 14f5971f6c4c8654c88971bf63bfe1e6, type: 3}
+    delay: 4
+  - spawnPos: {x: -6.4, y: -1.6}
     bulletType: {fileID: 8053003563457992941, guid: 14f5971f6c4c8654c88971bf63bfe1e6, type: 3}
     delay: 5
-  - spawnPos: {x: 0, y: 2.5}
+  - spawnPos: {x: -6.4, y: 4}
     bulletType: {fileID: 8053003563457992941, guid: 14f5971f6c4c8654c88971bf63bfe1e6, type: 3}
-    delay: 1
+    delay: 6

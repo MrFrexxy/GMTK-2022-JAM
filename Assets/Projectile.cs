@@ -4,16 +4,26 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
-    void Start()
+    public int projectileDamage;
+    // player object
+    private GameObject player;
+    private void Start()
     {
-        
+        player = FindObjectOfType<MovementController>().gameObject;
+        StartCoroutine(DestroyObject());
+    }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            player.GetComponent<StatusManager>().AddHealth(projectileDamage * -1);
+            Destroy(this.gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator DestroyObject()
     {
-        
+        yield return new WaitForSeconds(3);
+        Destroy(this.gameObject);
     }
 }
