@@ -27,7 +27,6 @@ public class StatusManager : MonoBehaviour
     public void AddBlock(int amt)
     {
         currentShield += amt;
-        SceneManager.LoadScene(1);
         //so shield doesnt become negative
         currentShield = currentShield < 0 ? 0 : currentShield;
     }
@@ -35,7 +34,7 @@ public class StatusManager : MonoBehaviour
     {
         //do death stuff
         PlayerInfo.stageNumber++;
-
+        SceneManager.LoadScene(1);
         Destroy(gameObject);
     }
     public void SetMaxHealth(int newHealth)

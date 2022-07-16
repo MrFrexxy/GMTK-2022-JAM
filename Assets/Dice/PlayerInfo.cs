@@ -13,7 +13,8 @@ public static class PlayerInfo
     {
         Dice[] newArray = new Dice[dieBag.Length + 1];
         dieBag.CopyTo(newArray, 0);
-        newArray[dieBag.Length] = newDice; 
+        newArray[dieBag.Length] = newDice;
+        dieBag = newArray;
     }
     public static void SetBag(Dice[] newBag)
     {

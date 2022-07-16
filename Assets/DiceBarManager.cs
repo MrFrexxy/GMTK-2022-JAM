@@ -13,15 +13,24 @@ public class DiceBarManager : MonoBehaviour
     public GameObject enemy;
     public GameObject player;
 
-    public Dice[] testingBag;
+    public Dice[] dieBag;
+    public Dice[] defaultBag;
     void Start()
     {
+        if(PlayerInfo.dieBag == null)
+        {
+            PlayerInfo.SetBag(defaultBag);
+        }
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         player = GameObject.FindGameObjectWithTag("Player");
-        PlayerInfo.dieBag = testingBag;
+        dieBag = PlayerInfo.dieBag;
         RefillBag();
         diceSlots = transform.GetComponentsInChildren<DiceSlot>();
         ReDrawDice();
+        foreach(Dice d in dieBag)
+        {
+            Debug.Log(d.diceName);
+        }
     }
     public void RemoveFromBag(int index)
     {
@@ -33,9 +42,9 @@ public class DiceBarManager : MonoBehaviour
     }
     public void RefillBag()
     {
-        for(int i = 0; i < testingBag.Length; i++)
+        for(int i = 0; i < dieBag.Length; i++)
         {
-            currentBag.Add(testingBag[i]);
+            currentBag.Add(dieBag[i]);
         }
     }
 
