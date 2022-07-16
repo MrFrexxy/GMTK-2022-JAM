@@ -140,10 +140,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  sceneManager: {fileID: 0}
   currentDice: {fileID: 0}
   imageComponent: {fileID: 2673053043646814363}
   nameText: {fileID: 2673053044706102706}
   descText: {fileID: 2673053044767538988}
+  isVisible: 0
+  isSelected: 0
 --- !u!1 &2673053043646814341
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

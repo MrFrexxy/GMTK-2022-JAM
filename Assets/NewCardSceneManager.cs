@@ -1,19 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NewCardSceneManager : MonoBehaviour
 {
+    private const int BATTLESCENE = 0;
     public NewCardPanel[] cardPanels;
     public Dice[] possibleDice;
     public Dice[] diceGrabBag;
 
     public Dice playerPick;
     public Dice[] defaultBag;
+    public int numSelections;
     void Awake()
     {
         cardPanels = transform.GetComponentsInChildren<NewCardPanel>();
-        if(PlayerInfo.dieBag.Length == 0)
+        if(PlayerInfo.dieBag == null)
         {
             PlayerInfo.SetBag(defaultBag);
         }
@@ -43,6 +46,7 @@ public class NewCardSceneManager : MonoBehaviour
     private IEnumerator WaitForShrink()
     {
         yield return new WaitForSeconds(NewCardPanel.SHRINKTIME);
+        if(numSelections == 0) SceneManager.LoadScene(BATTLESCENE);
         ShuffleSelection();
     }
 
@@ -71,11 +75,13 @@ public class NewCardSceneManager : MonoBehaviour
     }
     public void PickNewDice(Dice newDice)
     {
+        playerPick = newDice;
+        numSelections--;
         PlayerInfo.AddDiceToBag(newDice);
-        foreach(NewCardPanel panel in cardPanels)
+        for (int i = 0; i < cardPanels.Length; i++)
         {
-            panel.ShrinkAway();
+            StartCoroutine(cardPanels[i].ShrinkAway());
         }
-        WaitForShrink();
+        StartCoroutine(WaitForShrink());
     }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diceName: Spiked Dice
   description: Big damage, but may have some painful downsides
-  previewSprite: {fileID: -313884318, guid: d83215c8ced4f554ba7f0e7a03d4daa7, type: 3}
+  previewSprite: {fileID: 810905954, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
   faces:
   - sprite: {fileID: -1642543902, guid: d83215c8ced4f554ba7f0e7a03d4daa7, type: 3}
     type: 1

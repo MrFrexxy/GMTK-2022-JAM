@@ -9,7 +9,7 @@ public class NewCardPanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 {
     const float GROWTIME = 0.15f;
     const float GROWAMT = 0.1f;
-    public const float SHRINKTIME = 1f;
+    public const float SHRINKTIME = 0.3f;
     [SerializeField]
     private AnimationCurve growCurve;
     [SerializeField]
@@ -27,11 +27,14 @@ public class NewCardPanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     private Coroutine currentAnim;
     public bool isVisible;
     public bool isSelected;
+    private int sectionWidth;
     void Awake()
     {
         currentDice = null;
         imageRect = imageComponent.gameObject.GetComponent<RectTransform>();
         sceneManager = GameObject.FindGameObjectWithTag("Main Canvas").GetComponent<NewCardSceneManager>();
+        sectionWidth = Screen.width/3;
+        ChangeCoroutine(GrowIn());
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -49,13 +52,13 @@ public class NewCardPanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public void OnPointerExit(PointerEventData eventData)
     {
         ChangeCoroutine(HoverOffAnim());
-        isSelected = false;
+        isSelected = false;  
     }
     public void ChangeDice(Dice newDice)
     {
         currentDice = newDice;
         imageComponent.sprite = currentDice.previewSprite;
-        nameText.SetText(currentDice.name);
+        nameText.SetText(currentDice.diceName);
         descText.SetText(currentDice.description);
         ChangeCoroutine(GrowIn());
     }
@@ -66,7 +69,6 @@ public class NewCardPanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         {
             float newScale = 1 + growCurve.Evaluate(timeElapsed/GROWTIME)*GROWAMT;
             imageRect.localScale = Vector3.one * newScale;
-            Debug.Log(newScale);
             yield return null;
             timeElapsed += Time.deltaTime;
         }
@@ -91,7 +93,7 @@ public class NewCardPanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public IEnumerator ShrinkAway()
     {
         float timeElapsed = 0;
-        while(timeElapsed < GROWTIME)
+        while(timeElapsed < SHRINKTIME)
         {
             float newScale = (1 - growCurve.Evaluate(timeElapsed/GROWTIME));
             imageRect.localScale = Vector3.one * newScale;
@@ -99,11 +101,12 @@ public class NewCardPanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             timeElapsed += Time.deltaTime;
         }
         isVisible = false;
+        currentAnim = null;
     }
     private IEnumerator GrowIn()
     {
         float timeElapsed = 0;
-        while(timeElapsed < GROWTIME)
+        while(timeElapsed < SHRINKTIME)
         {
             float newScale = (growCurve.Evaluate(timeElapsed/GROWTIME));
             imageRect.localScale = Vector3.one * newScale;
@@ -111,6 +114,7 @@ public class NewCardPanel : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             timeElapsed += Time.deltaTime;
         }
         isVisible = true;
+        currentAnim = null;
     }
     
 }
