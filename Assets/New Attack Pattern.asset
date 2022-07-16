@@ -12,28 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9128542f038762845b784f8ae059cafa, type: 3}
   m_Name: New Attack Pattern
   m_EditorClassIdentifier: 
+  attackName: 
+  endDelay: 0.1
   projectiles:
   - spawnPos: {x: 0, y: 0}
-    rotation: 0
-    bulletType: {fileID: 0}
+    bulletType: {fileID: 8053003563457992941, guid: 14f5971f6c4c8654c88971bf63bfe1e6, type: 3}
     delay: 0
-  - spawnPos: {x: 0, y: 0}
-    rotation: 0
-    bulletType: {fileID: 0}
-    delay: 0
-  - spawnPos: {x: 0, y: 0}
-    rotation: 0
-    bulletType: {fileID: 0}
-    delay: 0
-  - spawnPos: {x: 0, y: 0}
-    rotation: 0
-    bulletType: {fileID: 0}
-    delay: 0
-  - spawnPos: {x: 0, y: 0}
-    rotation: 0
-    bulletType: {fileID: 0}
-    delay: 0
-  - spawnPos: {x: 0, y: 0}
-    rotation: 0
-    bulletType: {fileID: 0}
-    delay: 0
+  - spawnPos: {x: 0, y: -6.49}
+    bulletType: {fileID: 8053003563457992941, guid: 14f5971f6c4c8654c88971bf63bfe1e6, type: 3}
+    delay: 5
+  - spawnPos: {x: 0, y: 2.5}
+    bulletType: {fileID: 8053003563457992941, guid: 14f5971f6c4c8654c88971bf63bfe1e6, type: 3}
+    delay: 1

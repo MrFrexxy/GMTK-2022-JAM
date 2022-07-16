@@ -14,13 +14,14 @@ public static class GameStateManager
     public static GameState currentState;
     public static void ChangeState(GameState newState)
     {
-        if(newState == GameState.PlayerTurn)
+        if((newState != currentState) && (newState == GameState.PlayerTurn))
         {
             turnsLeft = 3;
+            GameObject.FindGameObjectWithTag("Dice Bar").GetComponent<DiceBarManager>().ReDrawDice();
         }
-        if(newState == GameState.EnemyTurn)
+        if((newState != currentState) &&(newState == GameState.EnemyTurn))
         {
-
+            GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyManager>().StartTurn();
         }
         currentState = newState;
     }

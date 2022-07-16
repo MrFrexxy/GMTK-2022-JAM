@@ -27,7 +27,7 @@ public class EnemyManager : MonoBehaviour
     }
     public void StartTurn()
     {
-        GameStateManager.ChangeState(GameStateManager.GameState.EnemyTurn);
+        Debug.Log("StartTurn");
         string lineToSend = enemyData.enemyName + ":" + enemyData.monologuePool[Random.Range(0, enemyData.monologuePool.Length)];
         SendLine(lineToSend, ref text);
         AttackPattern nextAttack = enemyData.attackPool[Random.Range(0, enemyData.attackPool.Length)];
@@ -43,16 +43,21 @@ public class EnemyManager : MonoBehaviour
 
     private IEnumerator DoAttack(AttackPattern attackToDo)
     {
+        
+        Debug.Log("StartATTACK");
         float highestDelay = 0;
-        foreach(ProjectileSpawn proj in attackToDo.projectiles)
+        for (int i = 0; i < attackToDo.projectiles.Length; i++)
         {
-            if(proj.delay > highestDelay) highestDelay = proj.delay;
-            StartCoroutine(QueueProjectile(proj));
+            Debug.Log("QueueATTACK");
+            if (attackToDo.projectiles[i].delay > highestDelay) highestDelay = attackToDo.projectiles[i].delay;
+            Debug.Log(i);
+            StartCoroutine(QueueProjectile(attackToDo.projectiles[i]));
         }
         yield return new WaitForSeconds(highestDelay + attackToDo.endDelay);
+        Debug.Log("THIS PLACE");
         EndTurn();
     }
-    private IEnumerator QueueProjectile(ProjectileSpawn projectileSpawn)
+    private IEnumerator QueueProjectile(AttackPattern.ProjectileSpawn projectileSpawn)
     {
         yield return new WaitForSeconds(projectileSpawn.delay);
         Instantiate(projectileSpawn.bulletType, projectileSpawn.spawnPos, Quaternion.identity);

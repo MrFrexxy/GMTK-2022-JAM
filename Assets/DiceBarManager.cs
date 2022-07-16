@@ -9,6 +9,7 @@ public class DiceBarManager : MonoBehaviour
     public List<Dice> currentBag;
     [SerializeField]
     private Canvas canvas;
+    public bool canRoll;
 
 
     public Dice[] testingBag;
@@ -17,21 +18,10 @@ public class DiceBarManager : MonoBehaviour
         PlayerInfo.dieBag = testingBag;
         RefillBag();
         diceSlots = transform.GetComponentsInChildren<DiceSlot>();
-        foreach(DiceSlot slot in diceSlots)
-        {
-            int dicePick = Random.Range(0, currentBag.Count-1);
-            slot.ChangeDice(currentBag[dicePick]);
-            RemoveFromBag(dicePick);
-        }
+        ReDrawDice();
+        canRoll = true;
     }
-    void LateUpdate()
-    {
-        if(EventSystem.current.IsPointerOverGameObject())
-        {
-
-        }
-    }
-    void RemoveFromBag(int index)
+    public void RemoveFromBag(int index)
     {
         currentBag.RemoveAt(index);
         if(currentBag.Count == 0)
@@ -39,21 +29,28 @@ public class DiceBarManager : MonoBehaviour
             RefillBag();
         }
     }
-    void RefillBag()
+    public void RefillBag()
     {
         for(int i = 0; i < testingBag.Length; i++)
         {
-            currentBag.Add(PlayerInfo.dieBag[i]);
+            currentBag.Add(testingBag[i]);
         }
     }
-    public void DragHandler(BaseEventData data)
+
+    public void RemoveAll()
     {
-        PointerEventData pointerData = (PointerEventData)data;
-        Vector2 position;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            (RectTransform)canvas.transform, 
-            pointerData.position,
-            canvas.worldCamera,
-            out position);
+        foreach(DiceSlot slot in diceSlots)
+        {
+            slot.RemoveDice();
+        }
+    }
+    public void ReDrawDice()
+    {
+        foreach(DiceSlot slot in diceSlots)
+        {
+            int dicePick = Random.Range(0, currentBag.Count-1);
+            slot.ChangeDice(currentBag[dicePick]);
+            RemoveFromBag(dicePick);
+        }
     }
 }

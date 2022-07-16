@@ -7,6 +7,7 @@ TagManager:
   - Dice Slot
   - Main Canvas
   - Enemy
+  - Dice Bar
   layers:
   - Default
   - TransparentFX

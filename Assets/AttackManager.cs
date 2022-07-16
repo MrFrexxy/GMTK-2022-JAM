@@ -24,7 +24,7 @@ public class AttackManager : MonoBehaviour
         }
     }
 
-    IEnumerator SpawnProjectile(ProjectileSpawn proj)
+    IEnumerator SpawnProjectile(AttackPattern.ProjectileSpawn proj)
     {
         yield return new WaitForSeconds(proj.delay);
         Instantiate(proj.bulletType, proj.spawnPos, transform.rotation);

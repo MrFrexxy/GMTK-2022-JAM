@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3b93144b5323841adba3cb843aa290, type: 3}
   m_Name: Rouletto
   m_EditorClassIdentifier: 
-  enemyName: Mr. Rouletto
-  sprite: {fileID: -902869963, guid: d83215c8ced4f554ba7f0e7a03d4daa7, type: 3}
+  enemyName: Rouletto
+  sprite: {fileID: 21300000, guid: 394c7c8c02bd709468bc425e51248db3, type: 3}
   attackPool:
   - {fileID: 11400000, guid: 5ce2109e814a4a6459e1a542eb378176, type: 2}
   monologuePool:
