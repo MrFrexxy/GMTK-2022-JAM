@@ -6,6 +6,7 @@ public class StatusManager : MonoBehaviour
 {
     [SerializeField]
     private int maxHealth;
+    [SerializeField]
     private int currentHealth;
     private int currentShield;
     void Start()
@@ -32,5 +33,9 @@ public class StatusManager : MonoBehaviour
     {
         //do death stuff
         Destroy(gameObject);
+    }
+    public void SetMaxHealth(int newHealth)
+    {
+        maxHealth = newHealth;
     }
 }

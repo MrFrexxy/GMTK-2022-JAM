@@ -7,10 +7,12 @@ using UnityEngine.EventSystems;
 public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler, IPointerMoveHandler
 {   
     private const int animationLength = 45;
-    private const float ROLLING_ANIM_TIME = 0.3f;
+    private const float ROLLING_ANIM_TIME = 0.2f;
     [SerializeField]
     private AnimationCurve mouseoverCurve;
-    private float animationFrame;
+    [SerializeField]
+    private AnimationCurve fadeAwayCurve;
+    public float animationFrame;
     private Dice currentDice;
     private Image spriteRenderer;
     private RectTransform rectTransform;
@@ -19,8 +21,11 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     private Canvas thisCanvas;
     private bool isFocused;
     private bool isGrabbed;
-    private bool inAttackPos;
+    public bool inAttackPos;
+    public bool isRolling;
+    public bool isFading;
     private Vector2 originalPos;
+    private Vector2 rollPos;
     private GameObject enemy;
     
     void Awake()
@@ -37,6 +42,15 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     void LateUpdate()
     {
+        if(isFading) 
+        {
+            if(animationFrame > 0) animationFrame--;
+            float sizeValue = mouseoverCurve.Evaluate(animationFrame/animationLength);
+            rectTransform.localScale = Vector3.one * (sizeValue);
+            if(animationFrame == 0) RemoveDice();
+            return;
+        }
+        if(isRolling) return;
         if(isFocused)
         {
             if(animationFrame < animationLength) animationFrame++;
@@ -50,8 +64,7 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             rectTransform.localScale = Vector3.one * (sizeValue+1);
         }
         //Guard clause
-        if(GameStateManager.currentState == GameStateManager.GameState.PlayerTurn) return;
-
+        if(GameStateManager.currentState != GameStateManager.GameState.PlayerTurn) return;
         if(isGrabbed && Input.mousePosition.x > Screen.width/2)
         {
             inAttackPos = true;
@@ -61,7 +74,7 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         
-        if(isFocused && GameStateManager.currentState == GameStateManager.GameState.PlayerTurn)
+        if(!isRolling && isFocused && GameStateManager.currentState == GameStateManager.GameState.PlayerTurn)
         {
             //Vector2 newPos;
             //RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas, eventData.position, null, out newPos);
@@ -77,7 +90,7 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             rectTransform.position = originalPos;
             else
             {
-                RollDice();
+                StartCoroutine(RollDice());
             }
     }
     public void OnPointerMove(PointerEventData eventData)
@@ -86,6 +99,7 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if(isRolling) return;
         isFocused = true;
     }
     public void OnPointerExit(PointerEventData eventData)
@@ -102,9 +116,17 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         currentDice = null;
         spriteRenderer.sprite = null;
+        rectTransform.position = originalPos;
+        if(GameStateManager.turnsLeft == 0)
+        {
+            GameStateManager.ChangeState(GameStateManager.GameState.EnemyTurn);
+            enemy.GetComponent<EnemyManager>().StartTurn();
+        }
     }
     public IEnumerator RollDice()
     {
+        GameStateManager.turnsLeft--;
+        isRolling = true;
         int faceNum = 0;
         for(int i = 0; i < 6; i++)
         {
@@ -113,5 +135,8 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             yield return new WaitForSeconds(ROLLING_ANIM_TIME);
         }
         currentDice.faces[faceNum].ActivateFace(enemy);
+        yield return new WaitForSeconds(ROLLING_ANIM_TIME*5);
+        isFading = true;
+        animationFrame = 1;
     }
 }

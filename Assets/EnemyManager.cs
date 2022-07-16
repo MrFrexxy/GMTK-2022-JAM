@@ -1,17 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class EnemyManager : MonoBehaviour
 {
     private const int MAX_LINES = 5;
-    public TextMeshPro textBox;
+    public TMP_Text textBox;
+    public Image icon;
     public Enemy enemyData;
+    private StatusManager statusManager;
     private string[] text;
+    void Awake()
+    {
+        icon = GetComponent<Image>();
+        statusManager = GetComponent<StatusManager>();
+        statusManager.SetMaxHealth(enemyData.health);
+    }
     void Start()
     {
         text = new string[MAX_LINES];
+        textBox.SetText("");
+        icon.sprite = enemyData.sprite;
+        GameStateManager.ChangeState(GameStateManager.GameState.PlayerTurn);
     }
     public void StartTurn()
     {

@@ -14,10 +14,14 @@ public static class GameStateManager
     public static GameState currentState;
     public static void ChangeState(GameState newState)
     {
-        currentState = newState;
         if(newState == GameState.PlayerTurn)
         {
             turnsLeft = 3;
         }
+        if(newState == GameState.EnemyTurn)
+        {
+
+        }
+        currentState = newState;
     }
 }
