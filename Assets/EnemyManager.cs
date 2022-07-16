@@ -10,12 +10,14 @@ public class EnemyManager : MonoBehaviour
     public TMP_Text textBox;
     public Image icon;
     public Enemy enemyData;
+    public Enemy[] enemyOrder;
     private StatusManager statusManager;
     private string[] text;
     void Awake()
     {
         icon = GetComponent<Image>();
         statusManager = GetComponent<StatusManager>();
+        enemyData = enemyOrder[PlayerInfo.stageNumber];
         statusManager.SetMaxHealth(enemyData.health);
     }
     void Start()
