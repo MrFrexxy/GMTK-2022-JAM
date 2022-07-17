@@ -663,6 +663,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 417fefe16edbde64ab922bbc5af2a5af, type: 2}
   - {fileID: 11400000, guid: 9eb50ba5e11a4de4bb3028d39046d5c6, type: 2}
   - {fileID: 11400000, guid: 8082b3d070b5b9441adbd2e499bad828, type: 2}
+  - {fileID: 11400000, guid: fbb8e66b703a2d14ea7a776524ef5b9c, type: 2}
+  - {fileID: 11400000, guid: baea39dbad3381f4ca2afcd168f4d0da, type: 2}
   diceGrabBag: []
   playerPick: {fileID: 0}
   defaultBag:
