@@ -16,6 +16,7 @@ public class Projectile : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("hit");
             player.GetComponent<StatusManager>().AddHealth(projectileDamage * -1);
             Destroy(this.gameObject);
         }
