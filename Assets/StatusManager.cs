@@ -35,7 +35,7 @@ public class StatusManager : MonoBehaviour
             }
         }
 
-        if(currentHealth < 0)
+        if(currentHealth <= 0)
         {
             Die();
         }
