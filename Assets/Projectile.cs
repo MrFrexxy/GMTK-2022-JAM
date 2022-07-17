@@ -19,6 +19,10 @@ public class Projectile : MonoBehaviour
             player.GetComponent<StatusManager>().AddHealth(projectileDamage * -1);
             Destroy(this.gameObject);
         }
+        if(col.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     IEnumerator DestroyObject()

@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Dice Bar
   - New Card Panel
+  - Wall
   layers:
   - Default
   - TransparentFX
