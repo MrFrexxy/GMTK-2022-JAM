@@ -14,7 +14,7 @@ public class ProjCircle : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 axis = new Vector3(0, 0, 1);
         transform.RotateAround(rotateCenter, axis, projSpeed * Time.deltaTime);

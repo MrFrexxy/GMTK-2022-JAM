@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ProjectilePrefabs/Scenes/SampleScene.unity
+    path: Assets/Scenes/Main Menu.unity
+    guid: 4f81fe7f8de3c2d43b634b0772e86c73
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/ProjectilePrefabs/Scenes/New Cards and Move On.unity
+    path: Assets/Scenes/New Cards and Move On.unity
     guid: dd1bb89b3d3b1224887bfb0dd1456ed9
   m_configObjects: {}
