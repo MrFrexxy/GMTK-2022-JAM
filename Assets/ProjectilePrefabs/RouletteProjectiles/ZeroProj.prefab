@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 8053003563457992942}
   - component: {fileID: -4624076128933968867}
   - component: {fileID: -6040216634189490575}
-  - component: {fileID: 8567370676555792414}
   - component: {fileID: 3677272878377278650}
+  - component: {fileID: -2209838502026242464}
   m_Layer: 0
-  m_Name: PokerChip
+  m_Name: ZeroProj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -513960561, guid: b030aa5b76564f14199d8040c8d0b97c, type: 3}
+  m_Sprite: {fileID: 1997255715, guid: b030aa5b76564f14199d8040c8d0b97c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,19 +125,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8567370676555792414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8053003563457992941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e328ca51e04194a4c9f5f117e7a2c506, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projSpeed: 5
 --- !u!114 &3677272878377278650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,3 +138,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileDamage: 1
+--- !u!114 &-2209838502026242464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8053003563457992941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23cfb4089ffca74586fa4cb5dada1f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projSpeed: 250
+  rotateCenter: {x: -1.4, y: 3.8}
