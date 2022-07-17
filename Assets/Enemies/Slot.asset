@@ -12,12 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3b93144b5323841adba3cb843aa290, type: 3}
   m_Name: Slot
   m_EditorClassIdentifier: 
-  enemyName: 
+  enemyName: Slotto
   idleSprite: {fileID: 21300000, guid: 34934955ea963be46a59886c3b2b9947, type: 3}
   hurtSprite: {fileID: 21300000, guid: 8b54c768b8328674f88ff0b4258e8fcc, type: 3}
   attackSprite: {fileID: 21300000, guid: 0bce0054b6e21884996a1465ec9d61e8, type: 3}
-  attackPool: []
+  attackPool:
+  - {fileID: 11400000, guid: fd0348f41f6c54b4992a15e5f1a8433a, type: 2}
+  - {fileID: 11400000, guid: a88a36b866273dc45afb886c223d7490, type: 2}
+  - {fileID: 11400000, guid: cd4a9e6a3be6dae4da111fafcaef9696, type: 2}
+  - {fileID: 11400000, guid: 84dc86e206d54904a92e1e30841f283d, type: 2}
   monologuePool:
   - '*Hits a jackpot*'
   - '*Hits a bust*'
-  health: 60
+  health: 75

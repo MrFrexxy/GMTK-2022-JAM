@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3b93144b5323841adba3cb843aa290, type: 3}
   m_Name: Stonk
   m_EditorClassIdentifier: 
-  enemyName: 
+  enemyName: STONKERTON
   idleSprite: {fileID: 21300000, guid: 35a9c6765c614a544ab32d20006712eb, type: 3}
   hurtSprite: {fileID: 21300000, guid: 422a243da3c25604aa241ba07855a844, type: 3}
   attackSprite: {fileID: 21300000, guid: d87dea12729b1f249852471e1f29ed6f, type: 3}
-  attackPool: []
+  attackPool:
+  - {fileID: 11400000, guid: 9f9a93a88a09997a0a70072313ff50ca, type: 2}
+  - {fileID: 11400000, guid: 1365895771f4e66c286bfc1e95fa5d7a, type: 2}
+  - {fileID: 11400000, guid: 342cd436b8289fabfaaac9f314bcbc71, type: 2}
+  - {fileID: 11400000, guid: 435dbb9b9ffdcac449296edb267ddbd4, type: 2}
   monologuePool:
   - You're the one about to crash.
-  health: 0
+  health: 40

@@ -12,14 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3b93144b5323841adba3cb843aa290, type: 3}
   m_Name: Coin
   m_EditorClassIdentifier: 
-  enemyName: 
+  enemyName: Abraham
   idleSprite: {fileID: 21300000, guid: 5d8e4f3946215694b9b409c9c09dc4bd, type: 3}
   hurtSprite: {fileID: 21300000, guid: 5d8e4f3946215694b9b409c9c09dc4bd, type: 3}
   attackSprite: {fileID: 21300000, guid: 5d8e4f3946215694b9b409c9c09dc4bd, type: 3}
-  attackPool: []
+  attackPool:
+  - {fileID: 11400000, guid: d9eb619f71b0a59d7b6b87bb6a0b3841, type: 2}
+  - {fileID: 11400000, guid: 6021e43daf170a40ca62c0667ae48f94, type: 2}
+  - {fileID: 11400000, guid: d65ee52a53e5cb08497ed3f7c2d4fc3b, type: 2}
+  - {fileID: 11400000, guid: 85e7128a7ef0b694991d176f9c7bb455, type: 2}
   monologuePool:
   - '*Lands on heads*'
   - '*Lands on tails*'
   - This will flip the tide of battle.
   - Time to flip the tide of battle.
-  health: 0
+  health: 50

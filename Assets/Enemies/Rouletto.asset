@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3b93144b5323841adba3cb843aa290, type: 3}
   m_Name: Rouletto
   m_EditorClassIdentifier: 
-  enemyName: Raoul
+  enemyName: Raulette
   idleSprite: {fileID: 21300000, guid: 394c7c8c02bd709468bc425e51248db3, type: 3}
   hurtSprite: {fileID: 21300000, guid: a2d07375214fd0840ae23509f97b6720, type: 3}
   attackSprite: {fileID: 21300000, guid: 4438be661d2db3747a19702334ea9772, type: 3}
   attackPool:
-  - {fileID: 11400000, guid: d65ee52a53e5cb08497ed3f7c2d4fc3b, type: 2}
+  - {fileID: 11400000, guid: 9955c696327047641bdd498806444e37, type: 2}
+  - {fileID: 11400000, guid: 1e96ec075fee0bd4a90cf66c73fb1479, type: 2}
+  - {fileID: 11400000, guid: 5ce2109e814a4a6459e1a542eb378176, type: 2}
+  - {fileID: 11400000, guid: 77dcf99eee064fb49ae7f47c0b05e90c, type: 2}
   monologuePool:
   - I'm gonna have your eye land on black
   - '*Spins furiously*'

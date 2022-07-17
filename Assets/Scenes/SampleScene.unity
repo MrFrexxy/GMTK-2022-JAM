@@ -220,6 +220,9 @@ MonoBehaviour:
   enemyOrder:
   - {fileID: 11400000, guid: fcbdb14ab513fa44fbf8060cd7f258cd, type: 2}
   - {fileID: 11400000, guid: a70b03cfba5629844876fe67a5989199, type: 2}
+  - {fileID: 11400000, guid: b0f1b3cd202a78f4f99e7775f6b5902a, type: 2}
+  - {fileID: 11400000, guid: eb76da74a047b5d49ad83b8dfde393ab, type: 2}
+  - {fileID: 11400000, guid: 68f5e061aff9c984ea192e00e94f41e5, type: 2}
   - {fileID: 11400000, guid: 9a386603ddbdc914cb4fc8ee8bf15385, type: 2}
   sprites: []
   arena: {fileID: 1669585601}
@@ -2742,7 +2745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903508758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.15, y: -0.56, z: 57.96608}
+  m_LocalPosition: {x: -3.23, y: 4.69, z: 57.96608}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
