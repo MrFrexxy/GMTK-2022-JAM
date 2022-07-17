@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public static class GameStateManager
 {
@@ -8,7 +9,9 @@ public static class GameStateManager
     {
         PlayerTurn = 0,
         EnemyTurn = 1,
-        Menu = 2
+        WinState = 2,
+        LoseState = 3,
+        Menu = 4
     }
     public static int turnsLeft;
     public static GameState currentState;
@@ -22,6 +25,24 @@ public static class GameStateManager
         if((newState != currentState) &&(newState == GameState.EnemyTurn))
         {
             GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyManager>().StartTurn();
+        }
+        if((newState != currentState) &&(newState == GameState.WinState))
+        {
+            if(PlayerInfo.stageNumber < 5)
+            {
+                PlayerInfo.stageNumber++;
+                SceneManager.LoadScene(1);
+            }
+            else
+            {
+                //win scene here
+                //SceneManager.LoadScene(3);
+            }
+            
+        }
+        if((newState != currentState) && (newState == GameState.LoseState))
+        {
+            //SceneManager.LoadScene(3);
         }
         currentState = newState;
     }

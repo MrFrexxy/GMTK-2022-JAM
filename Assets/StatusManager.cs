@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class StatusManager : MonoBehaviour
 {
     public HealthBar healthBar;
+    public bool isPlayer;
     private Animator animator;
 
     [SerializeField]
@@ -49,9 +50,14 @@ public class StatusManager : MonoBehaviour
     public void Die()
     {
         //do death stuff
-        PlayerInfo.stageNumber++;
-        SceneManager.LoadScene(1);
-        Destroy(gameObject);
+        if(!isPlayer)
+        {
+            GameStateManager.ChangeState(GameStateManager.GameState.WinState);
+        }
+        else
+        {
+            GameStateManager.ChangeState(GameStateManager.GameState.LoseState);
+        }
     }
     public void SetMaxHealth(int newHealth)
     {

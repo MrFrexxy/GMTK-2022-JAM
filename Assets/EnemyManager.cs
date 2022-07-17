@@ -64,13 +64,19 @@ public class EnemyManager : MonoBehaviour
             Debug.Log(i);
             StartCoroutine(QueueProjectile(attackToDo.projectiles[i]));
         }
+        animator.SetTrigger("isAttack");
         yield return new WaitForSeconds(highestDelay + attackToDo.endDelay);
+        foreach (Transform child in transform)
+        {
+        GameObject.Destroy(child.gameObject);
+        }
         EndTurn();
     }
     private IEnumerator QueueProjectile(AttackPattern.ProjectileSpawn projectileSpawn)
     {
         yield return new WaitForSeconds(projectileSpawn.delay);
-        Instantiate(projectileSpawn.bulletType, projectileSpawn.spawnPos, Quaternion.identity);
+        GameObject proj = Instantiate(projectileSpawn.bulletType, projectileSpawn.spawnPos, Quaternion.identity);
+        proj.transform.parent = gameObject.transform;
     }
     private void SendLine(string addedText, ref string[] fullText)
     {
