@@ -37,4 +37,8 @@ public class MovementController : MonoBehaviour
         animator.SetFloat("xspeed", horizInput);
         animator.SetFloat("yspeed", vertInput);
     }
+    public void ChangeSize(float value)
+    {
+        transform.localScale = transform.localScale/value;
+    }
 }

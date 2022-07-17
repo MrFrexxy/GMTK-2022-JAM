@@ -222,6 +222,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a70b03cfba5629844876fe67a5989199, type: 2}
   - {fileID: 11400000, guid: 9a386603ddbdc914cb4fc8ee8bf15385, type: 2}
   sprites: []
+  arena: {fileID: 1669585601}
 --- !u!114 &40219003
 MonoBehaviour:
   m_ObjectHideFlags: 0

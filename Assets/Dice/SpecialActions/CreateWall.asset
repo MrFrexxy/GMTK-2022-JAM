@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e0768e2fd9438f40a517adffc75779d, type: 3}
-  m_Name: AddSpeed
+  m_Name: CreateWall
   m_EditorClassIdentifier: 
-  diceName: Speed Dice
-  description: Increases move speed
-  previewSprite: {fileID: -725365527, guid: 1d91456446a745b4599f57455e84bfb5, type: 3}
+  diceName: Wall Dice
+  description: Creates a wall
+  previewSprite: {fileID: -2074645845, guid: 1d91456446a745b4599f57455e84bfb5, type: 3}
   faces:
   - sprite: {fileID: -893562820, guid: 1d91456446a745b4599f57455e84bfb5, type: 3}
     type: 4
     value: 1
-    specialAction: {fileID: 679464572675375655, guid: 6c6013ebc9f16504fbf4e8af10e1ca23, type: 3}
+    specialAction: {fileID: 1184345452253085665, guid: bd2dfcb6158127c45979e89af6e92ace, type: 3}
   - sprite: {fileID: -1364966724, guid: 1d91456446a745b4599f57455e84bfb5, type: 3}
     type: 4
     value: 2
-    specialAction: {fileID: 679464572675375655, guid: 6c6013ebc9f16504fbf4e8af10e1ca23, type: 3}
+    specialAction: {fileID: 1184345452253085665, guid: bd2dfcb6158127c45979e89af6e92ace, type: 3}
   - sprite: {fileID: 1819827030, guid: 1d91456446a745b4599f57455e84bfb5, type: 3}
     type: 4
     value: 3
-    specialAction: {fileID: 679464572675375655, guid: 6c6013ebc9f16504fbf4e8af10e1ca23, type: 3}
+    specialAction: {fileID: 1184345452253085665, guid: bd2dfcb6158127c45979e89af6e92ace, type: 3}
   rarity: 7

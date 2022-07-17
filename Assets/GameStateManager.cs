@@ -21,6 +21,7 @@ public static class GameStateManager
         {
             turnsLeft = 3;
             GameObject.FindGameObjectWithTag("Player").GetComponent<MovementController>().moveSpeed = PlayerInfo.PLAYERSPEED;
+            GameObject.FindGameObjectWithTag("Player").transform.localScale = Vector3.one;
             GameObject.FindGameObjectWithTag("Dice Bar").GetComponent<DiceBarManager>().ReDrawDice();
         }
         if((newState != currentState) &&(newState == GameState.EnemyTurn))

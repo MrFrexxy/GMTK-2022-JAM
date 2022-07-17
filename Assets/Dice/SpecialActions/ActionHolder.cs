@@ -2,10 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class DiceAction : MonoBehaviour
+public class ActionHolder : MonoBehaviour
 {
     // Start is called before the first frame update
-    public virtual void DoAction(GameObject target, GameObject player, int value)
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         
     }

@@ -15,6 +15,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField]
     private Sprite[] sprites;
     private Animator animator;
+    public GameObject arena;
     
     private string[] text;
     void Awake()
@@ -51,7 +52,7 @@ public class EnemyManager : MonoBehaviour
 
     public void EndTurn()
     {
-        foreach (Transform child in transform)
+        foreach (Transform child in arena.transform)
         {
         GameObject.Destroy(child.gameObject);
         }
@@ -106,5 +107,10 @@ public class EnemyManager : MonoBehaviour
     public void ChangeSprite(int num)
     {
         icon.sprite = sprites[num];
+    }
+    public void InstantiateToArena(GameObject newObject, Vector3 newPos)
+    {
+        GameObject obj = Instantiate(newObject, newPos, Quaternion.identity);
+        obj.transform.parent = arena.transform;
     }
 }
