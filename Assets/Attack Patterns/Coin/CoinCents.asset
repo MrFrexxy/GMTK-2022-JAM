@@ -16,23 +16,23 @@ MonoBehaviour:
   endDelay: 3
   projectiles:
   - spawnPos: {x: 1, y: 3.4}
-    bulletType: {fileID: 8053003563457992941, guid: 8a2dddfcc4741c345872acf7d23eed1f, type: 3}
+    bulletType: {fileID: 8053003563457992941, guid: 5402b333ad104a6b5851702ea66aade4, type: 3}
     delay: 2
   - spawnPos: {x: -2, y: 3.4}
-    bulletType: {fileID: 8053003563457992941, guid: 8a2dddfcc4741c345872acf7d23eed1f, type: 3}
+    bulletType: {fileID: 8053003563457992941, guid: 5402b333ad104a6b5851702ea66aade4, type: 3}
     delay: 2.3
   - spawnPos: {x: 0, y: 3.4}
-    bulletType: {fileID: 8053003563457992941, guid: 8a2dddfcc4741c345872acf7d23eed1f, type: 3}
+    bulletType: {fileID: 8053003563457992941, guid: 5402b333ad104a6b5851702ea66aade4, type: 3}
     delay: 2.6
   - spawnPos: {x: 1.2, y: 3.4}
-    bulletType: {fileID: 8053003563457992941, guid: 8a2dddfcc4741c345872acf7d23eed1f, type: 3}
+    bulletType: {fileID: 8053003563457992941, guid: 5402b333ad104a6b5851702ea66aade4, type: 3}
     delay: 2.9
   - spawnPos: {x: -3.4, y: 3.4}
-    bulletType: {fileID: 8053003563457992941, guid: 8a2dddfcc4741c345872acf7d23eed1f, type: 3}
+    bulletType: {fileID: 8053003563457992941, guid: 5402b333ad104a6b5851702ea66aade4, type: 3}
     delay: 3.2
   - spawnPos: {x: 0.5, y: 3.4}
-    bulletType: {fileID: 8053003563457992941, guid: 8a2dddfcc4741c345872acf7d23eed1f, type: 3}
+    bulletType: {fileID: 8053003563457992941, guid: 5402b333ad104a6b5851702ea66aade4, type: 3}
     delay: 3.5
   - spawnPos: {x: -4, y: 3.4}
-    bulletType: {fileID: 8053003563457992941, guid: 8a2dddfcc4741c345872acf7d23eed1f, type: 3}
+    bulletType: {fileID: 8053003563457992941, guid: 5402b333ad104a6b5851702ea66aade4, type: 3}
     delay: 3.8
