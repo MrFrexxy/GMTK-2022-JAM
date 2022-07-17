@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class NewCardSceneManager : MonoBehaviour
 {
-    private const int BATTLESCENE = 0;
+    private const int BATTLESCENE = 1;
     public NewCardPanel[] cardPanels;
     public Dice[] possibleDice;
     public Dice[] diceGrabBag;
@@ -20,10 +20,11 @@ public class NewCardSceneManager : MonoBehaviour
         {
             PlayerInfo.SetBag(defaultBag);
         }
+        numSelections = 3;
     }
     void Start()
     {
-        //FindObjectOfType<AudioManager>().TransitionSong("maintheme", "mainthemedrumsonly");
+        FindObjectOfType<AudioManager>().TransitionSong("maintheme", "mainthemedrumsonly");
         foreach (Dice dice in possibleDice)
         {
             int rarity = 10 - dice.rarity;
@@ -49,7 +50,7 @@ public class NewCardSceneManager : MonoBehaviour
         yield return new WaitForSeconds(NewCardPanel.SHRINKTIME);
         if (numSelections == 0)
         {
-            //FindObjectOfType<AudioManager>().TransitionSong("mainthemedrumsonly", "maintheme");
+            FindObjectOfType<AudioManager>().TransitionSong("mainthemedrumsonly", "maintheme");
             SceneManager.LoadScene(BATTLESCENE);
         }
         ShuffleSelection();

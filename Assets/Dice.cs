@@ -24,7 +24,8 @@ public class Dice : ScriptableObject
         [SerializeField]
         private int value;
         [SerializeField]
-        private DiceAction specialAction;
+        private GameObject specialAction;
+        private DiceAction specAction;
         public void ActivateFace(GameObject target, GameObject player)
         {
             if((int)type == 0)
@@ -45,13 +46,14 @@ public class Dice : ScriptableObject
             }
             if((int)type == 4)
             {
-                specialAction.DoAction(target, player, value);
+                specAction = specialAction.GetComponent(typeof(DiceAction)) as DiceAction;
+                specAction.DoAction(target, player, value);
             }
         }
-        /*public class specialAction<T>
+        public void DoAction<T>(T param, GameObject target, GameObject player, int value) where T : DiceAction
         {
-            T = 
-        }*/
+            param.DoAction(target, player, value);
+        }
         public Sprite GetSprite()
             {
                 return sprite;
