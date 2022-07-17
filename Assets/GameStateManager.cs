@@ -20,6 +20,7 @@ public static class GameStateManager
         if((newState != currentState) && (newState == GameState.PlayerTurn))
         {
             turnsLeft = 3;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<MovementController>().moveSpeed = PlayerInfo.PLAYERSPEED;
             GameObject.FindGameObjectWithTag("Dice Bar").GetComponent<DiceBarManager>().ReDrawDice();
         }
         if((newState != currentState) &&(newState == GameState.EnemyTurn))

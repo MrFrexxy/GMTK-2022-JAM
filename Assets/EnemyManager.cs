@@ -51,6 +51,10 @@ public class EnemyManager : MonoBehaviour
 
     public void EndTurn()
     {
+        foreach (Transform child in transform)
+        {
+        GameObject.Destroy(child.gameObject);
+        }
         GameStateManager.ChangeState(GameStateManager.GameState.PlayerTurn);
     }
 
@@ -66,10 +70,6 @@ public class EnemyManager : MonoBehaviour
         }
         animator.SetTrigger("isAttack");
         yield return new WaitForSeconds(highestDelay + attackToDo.endDelay);
-        foreach (Transform child in transform)
-        {
-        GameObject.Destroy(child.gameObject);
-        }
         EndTurn();
     }
     private IEnumerator QueueProjectile(AttackPattern.ProjectileSpawn projectileSpawn)

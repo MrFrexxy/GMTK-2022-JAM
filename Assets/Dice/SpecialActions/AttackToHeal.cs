@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class AttackToHeal : DiceAction
 {
-    public override void DoAction(GameObject target)
+    public override void DoAction(GameObject target, GameObject player, int value)
     {
-        base.DoAction(target);
         //something like this
         /*
         GameObject[] attacks = FindObjectsOfType<EnemyAttack>();

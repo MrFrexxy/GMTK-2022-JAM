@@ -5,6 +5,7 @@ using UnityEngine;
 public static class PlayerInfo
 {    
     public const int ROLLCOUNT = 3;
+    public const float PLAYERSPEED = 4;
     public static int stageNumber = 0;
     [SerializeField]
     public static Dice[] dieBag {get; set; }

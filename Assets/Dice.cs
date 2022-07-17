@@ -45,9 +45,13 @@ public class Dice : ScriptableObject
             }
             if((int)type == 4)
             {
-                specialAction.DoAction(target);
+                specialAction.DoAction(target, player, value);
             }
         }
+        /*public class specialAction<T>
+        {
+            T = 
+        }*/
         public Sprite GetSprite()
             {
                 return sprite;
