@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: -4624076128933968867}
   - component: {fileID: -6040216634189490575}
   - component: {fileID: 3677272878377278650}
+  - component: {fileID: -3415167877165896682}
   m_Layer: 0
-  m_Name: PokerChip 4
+  m_Name: Tails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 651084140, guid: b030aa5b76564f14199d8040c8d0b97c, type: 3}
+  m_Sprite: {fileID: -1859721044, guid: b030aa5b76564f14199d8040c8d0b97c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,9 +101,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.030437395, y: 0.03551036}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.1340522
 --- !u!50 &-6040216634189490575
 Rigidbody2D:
   serializedVersion: 4
@@ -137,3 +138,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileDamage: 1
+--- !u!114 &-3415167877165896682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8053003563457992941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2645f6b381241c144b2f47a02380b3e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizSpeed: 5
+  vertSpeed: 5
+  turnaroundFactor: 0.01
