@@ -37,8 +37,8 @@ public static class GameStateManager
             }
             else
             {
-                //win scene here
-                //SceneManager.LoadScene(3);
+                SceneManager.LoadScene(3);
+                AudioManager.instance.Play("WIN");
             }
             
         }
