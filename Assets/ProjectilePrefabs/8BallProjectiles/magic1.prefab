@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3677272878377278650}
   - component: {fileID: 8567370676555792414}
   m_Layer: 0
-  m_Name: Loss
+  m_Name: magic1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -352011318, guid: b030aa5b76564f14199d8040c8d0b97c, type: 3}
+  m_Sprite: {fileID: -124058228, guid: b030aa5b76564f14199d8040c8d0b97c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,9 +101,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.00942111}
+  m_Offset: {x: -0.030437395, y: 0.03551036}
   serializedVersion: 2
-  m_Radius: 0.14419802
+  m_Radius: 0.1340522
 --- !u!50 &-6040216634189490575
 Rigidbody2D:
   serializedVersion: 4

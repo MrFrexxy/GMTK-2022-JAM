@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: -4624076128933968867}
   - component: {fileID: -6040216634189490575}
   - component: {fileID: 3677272878377278650}
-  - component: {fileID: 8567370676555792414}
+  - component: {fileID: 5306014272185992918}
   m_Layer: 0
-  m_Name: Loss
+  m_Name: magic3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -352011318, guid: b030aa5b76564f14199d8040c8d0b97c, type: 3}
+  m_Sprite: {fileID: 1629328222, guid: b030aa5b76564f14199d8040c8d0b97c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,9 +101,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.00942111}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.14419802
+  m_Radius: 0.2
 --- !u!50 &-6040216634189490575
 Rigidbody2D:
   serializedVersion: 4
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileDamage: 1
---- !u!114 &8567370676555792414
+--- !u!114 &5306014272185992918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8053003563457992941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e328ca51e04194a4c9f5f117e7a2c506, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e2a5a444fb1ea8deb368b0f8a003dbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projSpeed: 5
+  projSpeed: 2

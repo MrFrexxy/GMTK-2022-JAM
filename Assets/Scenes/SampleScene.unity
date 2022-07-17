@@ -799,7 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be4f3413ca5ad644b37f4900c77fb3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pattern: {fileID: 11400000, guid: 1365895771f4e66c286bfc1e95fa5d7a, type: 2}
+  pattern: {fileID: 11400000, guid: a88a36b866273dc45afb886c223d7490, type: 2}
   iconSize: 0.36
 --- !u!4 &496677005
 Transform:
@@ -1173,7 +1173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2192793239009000071, guid: ac6b9be725f1c684a9cd363a6b17e292, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -217.55994
+      value: -217.55997
       objectReference: {fileID: 0}
     - target: {fileID: 2192793239009000071, guid: ac6b9be725f1c684a9cd363a6b17e292, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2721,7 +2721,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903508758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.42, y: 3.81, z: 57.96608}
+  m_LocalPosition: {x: 4.05, y: -2.07, z: 57.96608}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
