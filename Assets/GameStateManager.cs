@@ -45,6 +45,7 @@ public static class GameStateManager
         if((newState != currentState) && (newState == GameState.LoseState))
         {
             SceneManager.LoadScene(4);
+            AudioManager.instance.Play("LOSE");
         }
         currentState = newState;
     }
