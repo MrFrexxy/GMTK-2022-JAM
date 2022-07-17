@@ -150,6 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2645f6b381241c144b2f47a02380b3e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizSpeed: 5
-  vertSpeed: 5
+  horizSpeed: 0
+  vertSpeed: -8
   turnaroundFactor: 0.01
