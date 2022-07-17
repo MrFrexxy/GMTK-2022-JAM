@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9128542f038762845b784f8ae059cafa, type: 3}
+  m_Name: StonksMoneyAttack
+  m_EditorClassIdentifier: 
+  attackName: 
+  endDelay: 0
+  projectiles:
+  - spawnPos: {x: -5.5, y: -3.3}
+    bulletType: {fileID: 8053003563457992941, guid: f552c2c385e6ffa4588944a9b2fdbb39, type: 3}
+    delay: 1
+  - spawnPos: {x: 4, y: 4}
+    bulletType: {fileID: 8053003563457992941, guid: f552c2c385e6ffa4588944a9b2fdbb39, type: 3}
+    delay: 2
