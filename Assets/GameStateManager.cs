@@ -38,6 +38,7 @@ public static class GameStateManager
             else
             {
                 SceneManager.LoadScene(3);
+                AudioManager.instance.Stop("maintheme");
                 AudioManager.instance.Play("WIN");
             }
             
@@ -45,6 +46,7 @@ public static class GameStateManager
         if((newState != currentState) && (newState == GameState.LoseState))
         {
             SceneManager.LoadScene(4);
+            AudioManager.instance.Stop("maintheme");
             AudioManager.instance.Play("LOSE");
         }
         currentState = newState;

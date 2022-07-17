@@ -113,7 +113,11 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-        isFocused = false;
+        if(!isGrabbed)
+        {
+           isFocused = false; 
+        }
+        
     }
 
     public void ChangeDice(Dice newDice)
