@@ -18,7 +18,7 @@ public class MovementController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        FindObjectOfType<AudioManager>().Play("maintheme");
+        AudioManager.instance.Play("maintheme");
     }
     void Update()
     {
