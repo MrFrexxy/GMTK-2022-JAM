@@ -24,4 +24,8 @@ MonoBehaviour:
   monologuePool:
   - '*Hits a jackpot*'
   - '*Hits a bust*'
+  - '*Hits a bust*'
+  - '*Hits a bust*'
+  - '*Hits a bust*'
+  - '*Hits a bust*'
   health: 75

@@ -23,4 +23,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 435dbb9b9ffdcac449296edb267ddbd4, type: 2}
   monologuePool:
   - You're the one about to crash.
+  - '*Spikes*'
+  - '*Crashes*'
   health: 40
