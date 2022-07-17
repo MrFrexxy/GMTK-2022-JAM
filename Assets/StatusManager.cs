@@ -64,9 +64,8 @@ public class StatusManager : MonoBehaviour
         {
             GameStateManager.ChangeState(GameStateManager.GameState.WinState);
         }
-        if(isPlayer)
+        else
         {
-            SceneManager.LoadScene(4);
             GameStateManager.ChangeState(GameStateManager.GameState.LoseState);
         }
     }
