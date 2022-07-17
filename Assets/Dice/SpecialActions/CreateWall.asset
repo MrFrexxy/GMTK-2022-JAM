@@ -18,14 +18,14 @@ MonoBehaviour:
   faces:
   - sprite: {fileID: -893562820, guid: 1d91456446a745b4599f57455e84bfb5, type: 3}
     type: 4
-    value: 1
+    value: 0
     specialAction: {fileID: 1184345452253085665, guid: bd2dfcb6158127c45979e89af6e92ace, type: 3}
   - sprite: {fileID: -1364966724, guid: 1d91456446a745b4599f57455e84bfb5, type: 3}
     type: 4
-    value: 2
+    value: 1
     specialAction: {fileID: 1184345452253085665, guid: bd2dfcb6158127c45979e89af6e92ace, type: 3}
   - sprite: {fileID: 1819827030, guid: 1d91456446a745b4599f57455e84bfb5, type: 3}
     type: 4
-    value: 3
+    value: 2
     specialAction: {fileID: 1184345452253085665, guid: bd2dfcb6158127c45979e89af6e92ace, type: 3}
   rarity: 7

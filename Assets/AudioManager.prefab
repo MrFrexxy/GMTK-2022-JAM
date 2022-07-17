@@ -47,13 +47,31 @@ MonoBehaviour:
   sounds:
   - name: maintheme
     clip: {fileID: 8300000, guid: 033035c731da3684291e3cab82de182b, type: 3}
-    volume: 0.2
+    volume: 0.15
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: mainthemedrumsonly
     clip: {fileID: 8300000, guid: d1e871a4b7ec0bd48ad833e283eb5a8a, type: 3}
-    volume: 0.2
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: heal
+    clip: {fileID: 8300000, guid: 555a4cf878a74a04188e05b04e29a6cf, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: hit
+    clip: {fileID: 8300000, guid: 44fc78fc00d7fed438fadf88930459fe, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: hitboss
+    clip: {fileID: 8300000, guid: 44b0a6f67217adc44b00726f7f081250, type: 3}
+    volume: 0.6
     pitch: 1
     loop: 0
     source: {fileID: 0}

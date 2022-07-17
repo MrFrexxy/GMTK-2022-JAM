@@ -13,5 +13,23 @@ MonoBehaviour:
   m_Name: 8Ball4
   m_EditorClassIdentifier: 
   attackName: 
-  endDelay: 0
-  projectiles: []
+  endDelay: 3
+  projectiles:
+  - spawnPos: {x: 5, y: 2.7}
+    bulletType: {fileID: 8053003563457992941, guid: 8639e7028a90d644096c4408b025301f, type: 3}
+    delay: 2
+  - spawnPos: {x: 5, y: 2.1}
+    bulletType: {fileID: 8053003563457992941, guid: 8639e7028a90d644096c4408b025301f, type: 3}
+    delay: 2
+  - spawnPos: {x: 5, y: 1.5}
+    bulletType: {fileID: 8053003563457992941, guid: 8639e7028a90d644096c4408b025301f, type: 3}
+    delay: 2
+  - spawnPos: {x: 5, y: -0.5}
+    bulletType: {fileID: 8053003563457992941, guid: 8639e7028a90d644096c4408b025301f, type: 3}
+    delay: 3
+  - spawnPos: {x: 5, y: 0.1}
+    bulletType: {fileID: 8053003563457992941, guid: 8639e7028a90d644096c4408b025301f, type: 3}
+    delay: 3
+  - spawnPos: {x: 5, y: 0.7}
+    bulletType: {fileID: 8053003563457992941, guid: 8639e7028a90d644096c4408b025301f, type: 3}
+    delay: 3

@@ -42,11 +42,11 @@ public class EnemyManager : MonoBehaviour
         Debug.Log("StartTurn");
         //sends a random message from the enemy
         string lineToSend = enemyData.enemyName + ":" + enemyData.monologuePool[Random.Range(0, enemyData.monologuePool.Length)];
-        SendLine(lineToSend, ref text);
-        //picks a random attack form attack pool and announces it
+        textBox.SetText(lineToSend);
+        //picks a random attack form attack pool and announces it*/
         AttackPattern nextAttack = enemyData.attackPool[Random.Range(0, enemyData.attackPool.Length)];
-        lineToSend = enemyData.enemyName + " used " + nextAttack.name;
-        SendLine(lineToSend, ref text);
+        //lineToSend = enemyData.enemyName + " used " + nextAttack.name;
+        //SendLine(lineToSend, ref text);
         StartCoroutine(DoAttack(nextAttack));
     }
 

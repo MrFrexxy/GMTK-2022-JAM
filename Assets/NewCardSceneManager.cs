@@ -24,7 +24,7 @@ public class NewCardSceneManager : MonoBehaviour
     }
     void Start()
     {
-        FindObjectOfType<AudioManager>().TransitionSong("maintheme", "mainthemedrumsonly");
+        AudioManager.instance.TransitionSong("maintheme", "mainthemedrumsonly");
         foreach (Dice dice in possibleDice)
         {
             int rarity = 10 - dice.rarity;
@@ -50,7 +50,7 @@ public class NewCardSceneManager : MonoBehaviour
         yield return new WaitForSeconds(NewCardPanel.SHRINKTIME);
         if (numSelections == 0)
         {
-            FindObjectOfType<AudioManager>().TransitionSong("mainthemedrumsonly", "maintheme");
+            AudioManager.instance.TransitionSong("mainthemedrumsonly", "maintheme");
             SceneManager.LoadScene(BATTLESCENE);
         }
         ShuffleSelection();
