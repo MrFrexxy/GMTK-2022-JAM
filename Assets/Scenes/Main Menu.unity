@@ -344,6 +344,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de0885d28414bd48bc1a9a5cd12f670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultDiceBag:
+  - {fileID: 11400000, guid: a108544a204d0384e8b7e3185da3642c, type: 2}
+  - {fileID: 11400000, guid: a108544a204d0384e8b7e3185da3642c, type: 2}
+  - {fileID: 11400000, guid: a108544a204d0384e8b7e3185da3642c, type: 2}
+  - {fileID: 11400000, guid: a108544a204d0384e8b7e3185da3642c, type: 2}
+  - {fileID: 11400000, guid: 10d53c674adc008419957f3cc4b9a3d4, type: 2}
+  - {fileID: 11400000, guid: 10d53c674adc008419957f3cc4b9a3d4, type: 2}
 --- !u!1 &504211040
 GameObject:
   m_ObjectHideFlags: 0
