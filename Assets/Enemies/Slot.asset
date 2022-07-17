@@ -24,8 +24,7 @@ MonoBehaviour:
   monologuePool:
   - '*Hits a jackpot*'
   - '*Hits a bust*'
-  - '*Hits a bust*'
-  - '*Hits a bust*'
+  - 99% of people with a gambling addiction quit RIGHT BEFORE they strike it big!
   - '*Hits a bust*'
   - '*Hits a bust*'
   health: 75
