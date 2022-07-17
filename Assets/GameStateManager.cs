@@ -32,7 +32,7 @@ public static class GameStateManager
             if(PlayerInfo.stageNumber < 5)
             {
                 PlayerInfo.stageNumber++;
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
             else
             {

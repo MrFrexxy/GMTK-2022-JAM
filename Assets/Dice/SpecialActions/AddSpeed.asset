@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0768e2fd9438f40a517adffc75779d, type: 3}
   m_Name: AddSpeed
   m_EditorClassIdentifier: 
-  diceName: 
-  description: 
-  previewSprite: {fileID: 0}
-  faces: []
+  diceName: Speed Dice
+  description: Increases move speed
+  previewSprite: {fileID: -725365527, guid: 1d91456446a745b4599f57455e84bfb5, type: 3}
+  faces:
+  - sprite: {fileID: -893562820, guid: 1d91456446a745b4599f57455e84bfb5, type: 3}
+    type: 4
+    value: 1
+    specialAction: {fileID: 0}
   rarity: 0
