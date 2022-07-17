@@ -22,6 +22,16 @@ public class StatusManager : MonoBehaviour
     }
     public void AddHealth(int amt)
     {
+        if(amt < 0)
+        {
+            if (!isPlayer)
+            {
+                FindObjectOfType<AudioManager>().Play("hitboss");
+            }
+        } else if (amt > 0)
+        {
+            FindObjectOfType<AudioManager>().Play("heal");
+        }
         currentHealth += amt;
         //clamp health
         currentHealth = currentHealth > maxHealth ? maxHealth : currentHealth;
