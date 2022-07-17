@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3b93144b5323841adba3cb843aa290, type: 3}
   m_Name: 8Ball
   m_EditorClassIdentifier: 
-  enemyName: 
+  enemyName: 8 Ball
   idleSprite: {fileID: 21300000, guid: 58f3ec30b759e7241b799d4365520728, type: 3}
   hurtSprite: {fileID: 21300000, guid: ed0d1ba97d89cbe46a0ef1e98f63214f, type: 3}
   attackSprite: {fileID: 21300000, guid: b626cfd345193284092a3966237de985, type: 3}
@@ -25,4 +25,4 @@ MonoBehaviour:
   - Outlook not so good.
   - My sources say no.
   - Better not tell you now.
-  health: 50
+  health: 100

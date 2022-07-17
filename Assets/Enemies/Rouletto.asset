@@ -19,10 +19,10 @@ MonoBehaviour:
   attackPool:
   - {fileID: 11400000, guid: fa812b8c838a3ea49a03913933d06e6b, type: 2}
   monologuePool:
-  - I am a roulette wheel.
-  - EEEEOOOOWWWW
-  - '*It landed on black*'
-  - '*It landed on red*'
+  - I'm gonna have your eye land on black
+  - '*Spins furiously*'
+  - '*Lands on red*'
+  - '*Lands on black*'
   - '*Rattling noises*'
-  - I'm in Spain without the A.
+  - I'm going to put you in Spain without the A.
   health: 25

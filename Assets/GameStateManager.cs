@@ -44,7 +44,7 @@ public static class GameStateManager
         }
         if((newState != currentState) && (newState == GameState.LoseState))
         {
-            //SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
         currentState = newState;
     }

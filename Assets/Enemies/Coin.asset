@@ -17,5 +17,9 @@ MonoBehaviour:
   hurtSprite: {fileID: 21300000, guid: 5d8e4f3946215694b9b409c9c09dc4bd, type: 3}
   attackSprite: {fileID: 21300000, guid: 5d8e4f3946215694b9b409c9c09dc4bd, type: 3}
   attackPool: []
-  monologuePool: []
+  monologuePool:
+  - '*Lands on heads*'
+  - '*Lands on tails*'
+  - This will flip the tide of battle.
+  - Time to flip the tide of battle.
   health: 0

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0768e2fd9438f40a517adffc75779d, type: 3}
+  m_Name: EvilDice
+  m_EditorClassIdentifier: 
+  diceName: Evil Dice
+  description: 666
+  previewSprite: {fileID: 338678156, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
+  faces:
+  - sprite: {fileID: 338678156, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
+    type: 0
+    value: 6
+    specialAction: {fileID: 0}
+  - sprite: {fileID: 338678156, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
+    type: 0
+    value: 6
+    specialAction: {fileID: 0}
+  - sprite: {fileID: 338678156, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
+    type: 0
+    value: 6
+    specialAction: {fileID: 0}
+  - sprite: {fileID: 338678156, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
+    type: 0
+    value: 6
+    specialAction: {fileID: 0}
+  - sprite: {fileID: 338678156, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
+    type: 0
+    value: 6
+    specialAction: {fileID: 0}
+  - sprite: {fileID: 338678156, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
+    type: 0
+    value: 6
+    specialAction: {fileID: 0}
+  rarity: 8

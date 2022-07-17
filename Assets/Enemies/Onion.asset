@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3b93144b5323841adba3cb843aa290, type: 3}
   m_Name: Onion
   m_EditorClassIdentifier: 
-  enemyName: 
+  enemyName: Alium
   idleSprite: {fileID: 21300000, guid: 03ce25cf7e853f54780efc09efbde843, type: 3}
   hurtSprite: {fileID: 21300000, guid: 03ce25cf7e853f54780efc09efbde843, type: 3}
   attackSprite: {fileID: 21300000, guid: 03ce25cf7e853f54780efc09efbde843, type: 3}
@@ -22,5 +22,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1365895771f4e66c286bfc1e95fa5d7a, type: 2}
   monologuePool:
   - I am going to dice you up.
-  - I am Onion Man from Onion Land
+  - I'm going to put you in the ground.
+  - What're gonna do, cry?
+  - '*Makes onion noises*'
   health: 30
