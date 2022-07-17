@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -4624076128933968867}
   - component: {fileID: -6040216634189490575}
   - component: {fileID: 3677272878377278650}
-  - component: {fileID: 8567370676555792414}
+  - component: {fileID: 988979961140139662}
   m_Layer: 0
   m_Name: Loss
   m_TagString: Untagged
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileDamage: 1
---- !u!114 &8567370676555792414
+--- !u!114 &988979961140139662
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +147,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8053003563457992941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e328ca51e04194a4c9f5f117e7a2c506, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c7ac629046cacf73ad43639c938a7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projSpeed: 5
+  vertSpeed: -3
+  horizSpeed: 3

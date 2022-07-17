@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -4624076128933968867}
   - component: {fileID: -6040216634189490575}
   - component: {fileID: 3677272878377278650}
-  - component: {fileID: 8567370676555792414}
+  - component: {fileID: 7160202475118775045}
   m_Layer: 0
   m_Name: Coins
   m_TagString: Untagged
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileDamage: 1
---- !u!114 &8567370676555792414
+--- !u!114 &7160202475118775045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,4 +150,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e328ca51e04194a4c9f5f117e7a2c506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projSpeed: 5
+  projSpeed: 3
