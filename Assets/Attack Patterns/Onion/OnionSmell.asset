@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9128542f038762845b784f8ae059cafa, type: 3}
-  m_Name: OnionCrySmell 1
+  m_Name: OnionSmell
   m_EditorClassIdentifier: 
   attackName: 
-  endDelay: 0
+  endDelay: 4
   projectiles:
   - spawnPos: {x: -4.2, y: -2}
     bulletType: {fileID: 8053003563457992941, guid: a2e9b47d6f29b6a13931ecad04cc08f0, type: 3}

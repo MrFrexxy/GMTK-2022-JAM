@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RouletteCross
   m_EditorClassIdentifier: 
   attackName: 
-  endDelay: 3
+  endDelay: 4
   projectiles:
   - spawnPos: {x: -4, y: 4}
     bulletType: {fileID: 8053003563457992941, guid: 54712d142ca73e24ea689ceb166dafcb, type: 3}

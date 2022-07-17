@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RouletteZero
   m_EditorClassIdentifier: 
   attackName: 
-  endDelay: 3
+  endDelay: 4
   projectiles:
   - spawnPos: {x: -0.9, y: 3.8}
     bulletType: {fileID: 8053003563457992941, guid: 2322d47301a48f440a651b68172025a0, type: 3}

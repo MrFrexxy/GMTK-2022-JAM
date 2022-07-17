@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RoulettePokerChipAttack
   m_EditorClassIdentifier: 
   attackName: 
-  endDelay: 3
+  endDelay: 4
   projectiles:
   - spawnPos: {x: 3.7, y: 4}
     bulletType: {fileID: 8053003563457992941, guid: 14f5971f6c4c8654c88971bf63bfe1e6, type: 3}

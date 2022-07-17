@@ -47,7 +47,13 @@ MonoBehaviour:
   sounds:
   - name: maintheme
     clip: {fileID: 8300000, guid: 033035c731da3684291e3cab82de182b, type: 3}
-    volume: 0.3
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: mainthemedrumsonly
+    clip: {fileID: 8300000, guid: d1e871a4b7ec0bd48ad833e283eb5a8a, type: 3}
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
