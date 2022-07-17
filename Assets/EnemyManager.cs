@@ -12,11 +12,16 @@ public class EnemyManager : MonoBehaviour
     public Enemy enemyData;
     public Enemy[] enemyOrder;
     private StatusManager statusManager;
+    [SerializeField]
+    private Sprite[] sprites;
+    private Animator animator;
+    
     private string[] text;
     void Awake()
     {
         icon = GetComponent<Image>();
         statusManager = GetComponent<StatusManager>();
+        animator = GetComponent<Animator>();
         enemyData = enemyOrder[PlayerInfo.stageNumber];
         statusManager.SetMaxHealth(enemyData.health);
     }
@@ -24,7 +29,11 @@ public class EnemyManager : MonoBehaviour
     {
         text = new string[MAX_LINES];
         textBox.SetText("");
-        icon.sprite = enemyData.sprite;
+        sprites = new Sprite[3];
+        sprites[0] = enemyData.idleSprite;
+        sprites[1] = enemyData.hurtSprite;
+        sprites[2] = enemyData.attackSprite;
+        ChangeSprite(0);
         GameStateManager.ChangeState(GameStateManager.GameState.PlayerTurn);
     }
     public void StartTurn()
@@ -87,5 +96,9 @@ public class EnemyManager : MonoBehaviour
             newText = newText + t + "\n";
         }
         textBox.SetText(newText);
+    }
+    public void ChangeSprite(int num)
+    {
+        icon.sprite = sprites[num];
     }
 }
