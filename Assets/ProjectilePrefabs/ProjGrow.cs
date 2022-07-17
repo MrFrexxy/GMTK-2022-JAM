@@ -14,7 +14,7 @@ public class ProjGrow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 		transform.localScale*= growSpeed;
     }

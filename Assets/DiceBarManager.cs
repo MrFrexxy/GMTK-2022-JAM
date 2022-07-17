@@ -12,6 +12,7 @@ public class DiceBarManager : MonoBehaviour
     public int rollsLeft;
     public GameObject enemy;
     public GameObject player;
+    public DiceSlot currentRolling;
 
     public Dice[] dieBag;
     public Dice[] defaultBag;

@@ -56,7 +56,7 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             else if(animationFrame == 0)
             {
                 RemoveDice();
-                if(diceBarManager.rollsLeft == 0)
+                if(diceBarManager.rollsLeft == 0 && diceBarManager.currentRolling.currentDice == null)
                 {
                     GameStateManager.ChangeState(GameStateManager.GameState.EnemyTurn);
                     diceBarManager.RemoveAll();
@@ -136,7 +136,7 @@ public class DiceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         //decrements rollcount and changes to rollingState
         diceBarManager.rollsLeft--;
-        isRolling = true;
+        diceBarManager.currentRolling = this;
         //then shuffles face a couple of times
         int faceNum = 0;
         for(int i = 0; i < 6; i++)
