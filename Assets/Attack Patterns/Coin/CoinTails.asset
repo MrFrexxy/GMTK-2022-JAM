@@ -13,5 +13,35 @@ MonoBehaviour:
   m_Name: CoinTails
   m_EditorClassIdentifier: 
   attackName: 
-  endDelay: 0
-  projectiles: []
+  endDelay: 4
+  projectiles:
+  - spawnPos: {x: -4, y: 4.5}
+    bulletType: {fileID: 8053003563457992941, guid: f8af6afea3433598d8f3e6deeb49236e, type: 3}
+    delay: 2
+  - spawnPos: {x: 1.4, y: 4.5}
+    bulletType: {fileID: 8053003563457992941, guid: f8af6afea3433598d8f3e6deeb49236e, type: 3}
+    delay: 2
+  - spawnPos: {x: -3.4, y: 4.5}
+    bulletType: {fileID: 8053003563457992941, guid: f8af6afea3433598d8f3e6deeb49236e, type: 3}
+    delay: 2.5
+  - spawnPos: {x: 0.8, y: 4.5}
+    bulletType: {fileID: 8053003563457992941, guid: f8af6afea3433598d8f3e6deeb49236e, type: 3}
+    delay: 2.5
+  - spawnPos: {x: -2.8, y: 4.5}
+    bulletType: {fileID: 8053003563457992941, guid: f8af6afea3433598d8f3e6deeb49236e, type: 3}
+    delay: 3
+  - spawnPos: {x: 0.2, y: 4.5}
+    bulletType: {fileID: 8053003563457992941, guid: f8af6afea3433598d8f3e6deeb49236e, type: 3}
+    delay: 3
+  - spawnPos: {x: -2.2, y: 4.5}
+    bulletType: {fileID: 8053003563457992941, guid: f8af6afea3433598d8f3e6deeb49236e, type: 3}
+    delay: 3.5
+  - spawnPos: {x: -0.4, y: 4.5}
+    bulletType: {fileID: 8053003563457992941, guid: f8af6afea3433598d8f3e6deeb49236e, type: 3}
+    delay: 3.5
+  - spawnPos: {x: -1, y: 4.5}
+    bulletType: {fileID: 8053003563457992941, guid: f8af6afea3433598d8f3e6deeb49236e, type: 3}
+    delay: 4
+  - spawnPos: {x: -1.6, y: 4.5}
+    bulletType: {fileID: 8053003563457992941, guid: f8af6afea3433598d8f3e6deeb49236e, type: 3}
+    delay: 4

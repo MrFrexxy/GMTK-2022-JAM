@@ -16,7 +16,11 @@ MonoBehaviour:
   idleSprite: {fileID: 21300000, guid: 58f3ec30b759e7241b799d4365520728, type: 3}
   hurtSprite: {fileID: 21300000, guid: ed0d1ba97d89cbe46a0ef1e98f63214f, type: 3}
   attackSprite: {fileID: 21300000, guid: b626cfd345193284092a3966237de985, type: 3}
-  attackPool: []
+  attackPool:
+  - {fileID: 11400000, guid: f6ea67e62fabf844abf7b1f4b9333788, type: 2}
+  - {fileID: 11400000, guid: 45816e3331554b74ba38388135ffa74a, type: 2}
+  - {fileID: 11400000, guid: 58580b3f7286ad547a006910ad33d066, type: 2}
+  - {fileID: 11400000, guid: fa812b8c838a3ea49a03913933d06e6b, type: 2}
   monologuePool:
   - Reply hazy, try again.
   - Don't count on it.
