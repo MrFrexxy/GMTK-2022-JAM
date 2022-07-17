@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1791110227}
+  isPlayer: 0
   maxHealth: 0
   currentHealth: 0
 --- !u!95 &40219004
@@ -684,6 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1325213853}
+  isPlayer: 0
   maxHealth: 15
   currentHealth: 15
 --- !u!61 &491142962
@@ -1419,6 +1421,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6303232123417459175, guid: 488d8ca72d344be409a01f7e40f6864a, type: 3}
+      propertyPath: sounds.Array.data[0].loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 488d8ca72d344be409a01f7e40f6864a, type: 3}
 --- !u!1 &782789659
@@ -1521,6 +1527,7 @@ MonoBehaviour:
   rollsLeft: 0
   enemy: {fileID: 0}
   player: {fileID: 0}
+  currentRolling: {fileID: 0}
   dieBag: []
   defaultBag:
   - {fileID: 11400000, guid: a108544a204d0384e8b7e3185da3642c, type: 2}

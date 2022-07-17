@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff3b93144b5323841adba3cb843aa290, type: 3}
+  m_Name: Stonk
+  m_EditorClassIdentifier: 
+  enemyName: 
+  idleSprite: {fileID: 21300000, guid: 35a9c6765c614a544ab32d20006712eb, type: 3}
+  hurtSprite: {fileID: 21300000, guid: 422a243da3c25604aa241ba07855a844, type: 3}
+  attackSprite: {fileID: 21300000, guid: d87dea12729b1f249852471e1f29ed6f, type: 3}
+  attackPool: []
+  monologuePool: []
+  health: 0

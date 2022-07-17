@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: StonksDown
   m_EditorClassIdentifier: 
   attackName: 
-  endDelay: 0
+  endDelay: 4
   projectiles:
   - spawnPos: {x: -4.2, y: 3.8}
     bulletType: {fileID: 8053003563457992941, guid: 9b8dcd6181e8571fb8abaf1e379827e5, type: 3}

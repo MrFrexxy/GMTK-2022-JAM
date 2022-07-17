@@ -42,4 +42,24 @@ public class AudioManager : MonoBehaviour
 
         s.source.Play();
     }
+
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+            return;
+        s.source.Stop();
+    }
+
+    public void TransitionSong(string name1, string name2)
+    {
+        Sound firstSong = Array.Find(sounds, sound => sound.name == name1);
+        Sound secondSong = Array.Find(sounds, sound => sound.name == name2);
+
+        float transitionTime = firstSong.source.time;
+        secondSong.source.time = transitionTime;
+
+        firstSong.source.Stop();
+        secondSong.source.Play();
+    }
 }

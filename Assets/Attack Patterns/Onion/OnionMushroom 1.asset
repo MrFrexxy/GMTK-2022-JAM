@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: OnionMushroom 1
   m_EditorClassIdentifier: 
   attackName: 
-  endDelay: 0
+  endDelay: 4
   projectiles:
   - spawnPos: {x: -5.5, y: -3.3}
     bulletType: {fileID: 8053003563457992941, guid: f552c2c385e6ffa4588944a9b2fdbb39, type: 3}

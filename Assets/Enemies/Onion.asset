@@ -21,5 +21,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 435dbb9b9ffdcac449296edb267ddbd4, type: 2}
   - {fileID: 11400000, guid: 1365895771f4e66c286bfc1e95fa5d7a, type: 2}
   monologuePool:
-  - No Monologue
+  - I am going to dice you up.
+  - I am Onion Man from Onion Land
   health: 30

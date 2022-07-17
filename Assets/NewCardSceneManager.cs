@@ -23,7 +23,8 @@ public class NewCardSceneManager : MonoBehaviour
     }
     void Start()
     {
-        foreach(Dice dice in possibleDice)
+        //FindObjectOfType<AudioManager>().TransitionSong("maintheme", "mainthemedrumsonly");
+        foreach (Dice dice in possibleDice)
         {
             int rarity = 10 - dice.rarity;
             Dice[] newBag = new Dice[diceGrabBag.Length + rarity];
@@ -46,7 +47,11 @@ public class NewCardSceneManager : MonoBehaviour
     private IEnumerator WaitForShrink()
     {
         yield return new WaitForSeconds(NewCardPanel.SHRINKTIME);
-        if(numSelections == 0) SceneManager.LoadScene(BATTLESCENE);
+        if (numSelections == 0)
+        {
+            //FindObjectOfType<AudioManager>().TransitionSong("mainthemedrumsonly", "maintheme");
+            SceneManager.LoadScene(BATTLESCENE);
+        }
         ShuffleSelection();
     }
 
