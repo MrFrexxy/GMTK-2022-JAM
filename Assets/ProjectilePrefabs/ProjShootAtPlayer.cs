@@ -17,6 +17,7 @@ public class ProjShootAtPlayer : MonoBehaviour
         Vector2 projVelo = new Vector2((playerPos.x - projPos.x),
             (playerPos.y - projPos.y));
         rb.velocity = projVelo.normalized * projSpeed;
+        
     }
-
+    
 }
