@@ -13,31 +13,31 @@ MonoBehaviour:
   m_Name: EvilDice
   m_EditorClassIdentifier: 
   diceName: Evil Dice
-  description: 666
+  description: 666 666
   previewSprite: {fileID: 338678156, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
   faces:
   - sprite: {fileID: 338678156, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
-    type: 0
     value: 6
-    specialAction: {fileID: 0}
+    actions:
+    - {fileID: 11400000, guid: 83c80fd4100fdc14f865581006c8b602, type: 2}
   - sprite: {fileID: 338678156, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
-    type: 0
     value: 6
-    specialAction: {fileID: 0}
+    actions:
+    - {fileID: 11400000, guid: 83c80fd4100fdc14f865581006c8b602, type: 2}
   - sprite: {fileID: 338678156, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
-    type: 0
     value: 6
-    specialAction: {fileID: 0}
+    actions:
+    - {fileID: 11400000, guid: 83c80fd4100fdc14f865581006c8b602, type: 2}
   - sprite: {fileID: 338678156, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
-    type: 0
     value: 6
-    specialAction: {fileID: 0}
+    actions:
+    - {fileID: 11400000, guid: 83c80fd4100fdc14f865581006c8b602, type: 2}
   - sprite: {fileID: 338678156, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
-    type: 0
     value: 6
-    specialAction: {fileID: 0}
+    actions:
+    - {fileID: 11400000, guid: 83c80fd4100fdc14f865581006c8b602, type: 2}
   - sprite: {fileID: 338678156, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
-    type: 0
     value: 6
-    specialAction: {fileID: 0}
+    actions:
+    - {fileID: 11400000, guid: 83c80fd4100fdc14f865581006c8b602, type: 2}
   rarity: 8

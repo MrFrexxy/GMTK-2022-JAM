@@ -108,9 +108,10 @@ public class EnemyManager : MonoBehaviour
     {
         icon.sprite = sprites[num];
     }
-    public void InstantiateToArena(GameObject newObject, Vector3 newPos)
+    public GameObject InstantiateToArena(GameObject newObject, Vector3 newPos)
     {
         GameObject obj = Instantiate(newObject, newPos, Quaternion.identity);
         obj.transform.parent = arena.transform;
+        return obj;
     }
 }

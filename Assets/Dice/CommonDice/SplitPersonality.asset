@@ -16,28 +16,29 @@ MonoBehaviour:
   description: Half healing, half attacking
   previewSprite: {fileID: -1738971908, guid: b5d8fe67d5c1eae438765cc0a70a14b9, type: 3}
   faces:
-  - sprite: {fileID: 327123153, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
-    type: 0
+  - sprite: {fileID: -809281699, guid: b5d8fe67d5c1eae438765cc0a70a14b9, type: 3}
     value: 1
-    specialAction: {fileID: 0}
+    actions:
+    - {fileID: 11400000, guid: 83c80fd4100fdc14f865581006c8b602, type: 2}
+    - {fileID: 11400000, guid: d07400f0e9066454689e0957bd484d51, type: 2}
   - sprite: {fileID: -1738971908, guid: b5d8fe67d5c1eae438765cc0a70a14b9, type: 3}
-    type: 2
     value: 2
-    specialAction: {fileID: 0}
-  - sprite: {fileID: 1684571799, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
-    type: 0
+    actions:
+    - {fileID: 11400000, guid: 83c80fd4100fdc14f865581006c8b602, type: 2}
+    - {fileID: 11400000, guid: d07400f0e9066454689e0957bd484d51, type: 2}
+  - sprite: {fileID: -1530417386, guid: b5d8fe67d5c1eae438765cc0a70a14b9, type: 3}
     value: 3
-    specialAction: {fileID: 0}
+    actions:
+    - {fileID: 11400000, guid: 83c80fd4100fdc14f865581006c8b602, type: 2}
+    - {fileID: 11400000, guid: d07400f0e9066454689e0957bd484d51, type: 2}
+  - sprite: {fileID: -1738971908, guid: b5d8fe67d5c1eae438765cc0a70a14b9, type: 3}
+    value: 2
+    actions:
+    - {fileID: 11400000, guid: 83c80fd4100fdc14f865581006c8b602, type: 2}
+    - {fileID: 11400000, guid: d07400f0e9066454689e0957bd484d51, type: 2}
   - sprite: {fileID: 1464303930, guid: b5d8fe67d5c1eae438765cc0a70a14b9, type: 3}
-    type: 2
     value: 4
-    specialAction: {fileID: 0}
-  - sprite: {fileID: 1866072298, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
-    type: 0
-    value: 5
-    specialAction: {fileID: 0}
-  - sprite: {fileID: 1866072298, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
-    type: 2
-    value: 6
-    specialAction: {fileID: 0}
+    actions:
+    - {fileID: 11400000, guid: 83c80fd4100fdc14f865581006c8b602, type: 2}
+    - {fileID: 11400000, guid: d07400f0e9066454689e0957bd484d51, type: 2}
   rarity: 0

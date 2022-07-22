@@ -17,27 +17,27 @@ MonoBehaviour:
   previewSprite: {fileID: -1747495667, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
   faces:
   - sprite: {fileID: -313884318, guid: d83215c8ced4f554ba7f0e7a03d4daa7, type: 3}
-    type: 1
     value: 9
-    specialAction: {fileID: 0}
+    actions:
+    - {fileID: 11400000, guid: 0a304fbe63fb7a34b95e8cc73fb1ae0d, type: 2}
   - sprite: {fileID: 810905954, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
-    type: 0
     value: 9
-    specialAction: {fileID: 0}
+    actions:
+    - {fileID: 11400000, guid: 83c80fd4100fdc14f865581006c8b602, type: 2}
   - sprite: {fileID: 810905954, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
-    type: 0
     value: 9
-    specialAction: {fileID: 0}
+    actions:
+    - {fileID: 11400000, guid: 83c80fd4100fdc14f865581006c8b602, type: 2}
   - sprite: {fileID: 810905954, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
-    type: 0
     value: 9
-    specialAction: {fileID: 0}
+    actions:
+    - {fileID: 11400000, guid: 83c80fd4100fdc14f865581006c8b602, type: 2}
   - sprite: {fileID: 810905954, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
-    type: 0
     value: 9
-    specialAction: {fileID: 0}
+    actions:
+    - {fileID: 11400000, guid: 83c80fd4100fdc14f865581006c8b602, type: 2}
   - sprite: {fileID: 810905954, guid: 4d0cffe1a772a9946a1f4e5b5ad1de5e, type: 3}
-    type: 0
     value: 9
-    specialAction: {fileID: 0}
+    actions:
+    - {fileID: 11400000, guid: 83c80fd4100fdc14f865581006c8b602, type: 2}
   rarity: 7

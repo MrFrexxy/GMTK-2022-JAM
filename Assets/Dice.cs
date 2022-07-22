@@ -2,57 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEditor;
 
 [CreateAssetMenu(fileName = "New Dice", menuName = "Dice")]
 public class Dice : ScriptableObject
 {
+    [CustomEditor(typeof(DiceFace))]
     [Serializable]
     public class DiceFace
     {
-        enum FaceType : int
-        {
-            Attack = 0,
-            SelfHarm = 1,
-            Heal = 2,
-            EnemyHeal = 3,
-            Special = 4
-        }
         [SerializeField]
         private Sprite sprite;
         [SerializeField]
-        private FaceType type;
-        [SerializeField]
         private int value;
         [SerializeField]
-        private GameObject specialAction;
-        private DiceAction specAction;
+        private DiceAction[] actions;
         public void ActivateFace(GameObject target, GameObject player)
         {
-            if((int)type == 0)
+            foreach(DiceAction action in actions)
             {
-                target.GetComponent<StatusManager>().AddHealth(-value);
+                action.DoAction(target, player, value);
             }
-            if((int)type == 1)
-            {
-                player.GetComponent<StatusManager>().AddHealth(-value);
-            }
-            if((int)type == 2)
-            {
-                player.GetComponent<StatusManager>().AddHealth(value);
-            }
-            if((int)type == 3)
-            {
-                target.GetComponent<StatusManager>().AddHealth(value);
-            }
-            if((int)type == 4)
-            {
-                specAction = specialAction.GetComponent(typeof(DiceAction)) as DiceAction;
-                specAction.DoAction(target, player, value);
-            }
-        }
-        public void DoAction<T>(T param, GameObject target, GameObject player, int value) where T : DiceAction
-        {
-            param.DoAction(target, player, value);
+            
         }
         public Sprite GetSprite()
             {
@@ -66,4 +37,10 @@ public class Dice : ScriptableObject
     public DiceFace[] faces;
     [Range(0, 9)]
     public int rarity;
+}
+
+[CustomEditor(typeof(Dice)), CanEditMultipleObjects]
+public class DiceEditor : Editor
+{
+
 }
